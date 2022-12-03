@@ -1,0 +1,64 @@
+@use '/src/assets/sass/mixins';
+
+.message-box{
+    // border: 1px solid #888;
+    border-radius: 5px;
+    margin: 8px;
+    margin-bottom: 36px;
+    padding: 8px;
+    color: var(--section-font-color);
+    .file-link{
+        color: var(--accent-color);
+        margin-right: 16px;
+        text-decoration: underline;
+    }
+    .sender{
+        display: flex;
+        align-items: center;
+        .sender-avatar{
+            width: 35px;
+            height: 35px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+    }
+    .message{
+        @include mixins.flex($direction: column, $justify: space-between) ;
+        width: fit-content;
+        max-width: 100%;
+        overflow: scroll;
+        margin: 8px 0;
+        padding: 8px;
+        border-radius: 15px;
+        .date{
+            color: #888;
+        }
+    }
+    .customer-message{
+        direction: ltr ;
+        margin-bottom: 24px;
+        .sender-avatar{
+            margin-right:8px;
+        }
+        .message{
+            border-top-left-radius: 0 !important;
+            background-color: var(--customer-message-color);
+            direction: rtl;
+            span{
+                text-align: left;
+            }
+        }
+    }
+    
+    .admin-message{
+        direction: rtl;
+        margin-bottom: 24px;
+        .sender-avatar{
+            margin-left:8px;
+        }
+        .message{
+            background-color: var(--admin-message-color);
+            border-top-right-radius: 0 !important;
+        }
+    }
+}

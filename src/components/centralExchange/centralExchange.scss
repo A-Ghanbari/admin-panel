@@ -1,0 +1,35 @@
+@use '/src/assets/sass/mixins';
+
+.centralExchange-exit-barcode{
+    margin-top: 16px;
+    border-top: 1px solid #888;
+    padding: 8px;
+    h1{
+        margin: 16px 16px 0;
+        color: var(--accent-color);
+    }
+    .waiting-code-wrapper{
+        margin-bottom: 16px;
+        .waiting-code-list{
+            word-break: break-all;
+            height: 100%;
+            @include mixins.flex($justify: center , $align:center);
+        }
+        .barcode-count{
+            font-size: 1.2em;
+            margin-bottom: 32px;
+            span{
+                font-size: 1.3em;
+                color: var(--success-color);
+            }
+        }
+    }
+    .button{
+        @media (min-width:576px) {   
+            margin-top: 26px !important;
+        }
+    }
+}
+.centralExchange-exit-col{
+    padding: 0 !important;
+}

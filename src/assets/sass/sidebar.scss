@@ -1,0 +1,8 @@
+.sidebar{
+    background-color: var(--sidebar-background-color) !important;
+    box-shadow: var(--main-box-shadow) !important;
+    z-index: 3;
+    @media screen and(max-width:767px) {
+        display: none;
+    }
+}

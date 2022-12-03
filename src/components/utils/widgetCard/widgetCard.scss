@@ -1,0 +1,12 @@
+@use '/src/assets/sass/mixins';
+.widget-card{
+    height: 100% !important;
+    .ant-card{
+        height: 100% !important;
+        @include mixins.flex($direction: column);
+    }
+    .ant-card-body {
+        flex-grow: 2;
+        padding: 16px !important;
+    }
+}

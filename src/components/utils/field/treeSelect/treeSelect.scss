@@ -1,0 +1,55 @@
+@use '/src/assets/sass/mixins';
+
+.tree-select{
+    .ant-select-selector {
+        @include mixins.input;
+        @include mixins.input-focus;
+        .ant-select-selection-item {
+            padding: 8px 0 !important;
+        }
+    }
+    .ant-select-arrow {
+        color: var(--accent-color) !important;
+        top: 42px !important;
+    }
+
+    input{
+        padding-top: 16px !important;
+    }
+    .ant-select-selection-placeholder{
+        padding-top: 8px !important;
+    }
+}
+.ant-select-tree{
+    background-color: var(--select-background-color) !important;
+    color: var( --section-font-color) !important;
+}
+.ant-select-tree-node-selected{
+    background-color: var(--accent-color) !important;
+    color: var( --primary-font-color) !important;
+}
+.ant-select-tree .ant-select-tree-node-content-wrapper:hover {
+    background-color: #00000000 !important;
+    color: var(--accent-color) !important;
+}
+.ant-select-tree-treenode{
+    color: var( --section-font-color) !important;
+}
+.ant-select-tree-list-scrollbar-thumb{
+    background-color: var(--accent-color) !important;
+}
+.ant-tree-select-dropdown{
+    background-color: var(--select-background-color) !important;
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: var(--accent-color) !important;
+        color: var( --primary-font-color) !important;
+    }
+    
+    .ant-select-item{
+        color: var( --section-font-color) !important;
+    }
+    .ant-select-item-option-active {
+        color: var(--accent-color) !important;
+        background-color: #00000000 !important;
+    }
+}

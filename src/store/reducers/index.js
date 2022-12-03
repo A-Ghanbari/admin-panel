@@ -1,0 +1,171 @@
+import { combineReducers } from "@reduxjs/toolkit"
+import { user, collapsedMenu } from "store/reducers/user"
+import { filter } from "store/reducers/filter"
+import { salesWidget, warehouseWidget, cartBankWidget } from "store/reducers/dashboard"
+import { managementReportWarehouse, managementReportInvoice, managementReportCharge } from "store/reducers/managementReport"
+import { orders, order, orderBarcodeStatuses, orderWarehouseExitLogs, orderWarehouseExitLog, orderWarehouseExitWaitingList, orderWarehouseExitPostDelivery, orderWarehouseExitLastOrder, provinceOrders } from "store/reducers/order"
+import { packingRankings, packingOrders, packingOrder } from "store/reducers/packing"
+import { manualOrders, manualOrder, manualOrderWarehouseExits, manualOrderProvinces, manualOrderAwaitings, manualOrderType, manualOrderBarcodeStatuses, manualOrderWarehouseExitLastOrder } from "store/reducers/manualOrder"
+import { centralExchanges, centralExchange, centralExchangeWorkers, centralExchangeBoxes, centralExchangeBox } from "store/reducers/centralExchange"
+import { tickets, ticketMessage, ticketOperator, ticketTypes, ticketCategories, ticketRoles, ticketCloses, ticketTemplates, ticketPoints } from "store/reducers/ticket"
+import { customers, customer, customerWalletTransactions, walletsTransactions } from "store/reducers/customer"
+import { comments } from "store/reducers/comment"
+import { frequentlyQuestions, frequentlyQuestion } from "store/reducers/FrequentlyQuestions"
+import { contactUsMessages, contactUsMessage, contentPositions, contentPosition, contentSliders } from "store/reducers/content"
+import { brands, groups, groupColors, groupAttributes, groupParentAttributes, productColors, productCommerces, productCarts, productFiles, products, productAttributes, productAttributeLists, productModifyLogs, productLogs, brandWithProductList, productPriceInfo } from "store/reducers/product"
+import { provinceLists, cityLists, brandLists, groupLists, periodLists } from "store/reducers/cache"
+import { postBranches, postBranch, postDDLBranches, postCompanies } from "store/reducers/post"
+import { reagentCodes, discounts, campaigns, discountProducts, discountCustomers, discountCities, discountSuppliers, discountCarts, discountOrders } from "store/reducers/marketing"
+import { blogAuthors, blogTags, blogFaqs, blogGroups, blogContents, blogComments } from "store/reducers/blog"
+import { roleSettings, roleUsers, roleSettingPage, roleSettingUsers } from "store/reducers/role"
+import { landingPages } from "store/reducers/landingPage"
+import { suppliers, supplierList, supplierWarehouses, commercialRequests, commercialDiscounts, managementRequests, commercialPricings, financialRequests, warehouseRequests, discountDrafts, discountDraftData } from "store/reducers/commercial"
+import { managePages } from "store/reducers/setting"
+import { sepidarInvoices } from "store/reducers/sepidar"
+import { formStep, reloadList } from "store/reducers/public"
+import { leaderBoards, leaderBoardInfo, reagentConditions, loginCounts, profileConditions, orderConditions, priceConditions, gamesInfo, gamesLists, gameConditions, prizeConditions, prizesInfo, prizesLists, eventsLists, gamePrizes, productsConditions, discountPrizes, questionnaireConditions, customerDiscounts } from "store/reducers/leaderBoard"
+import { questionnaireGroups, questionnaireGroupDetail, questionnaireQAS, questionnaireQADetail } from 'store/reducers/questionnaire'
+
+const reducer = combineReducers({
+    user,
+    collapsedMenu,
+    filter,
+    salesWidget,
+    warehouseWidget,
+    cartBankWidget,
+    managementReportWarehouse,
+    managementReportInvoice,
+    managementReportCharge,
+    orders,
+    order,
+    orderBarcodeStatuses,
+    orderWarehouseExitLogs,
+    orderWarehouseExitLog,
+    orderWarehouseExitWaitingList,
+    orderWarehouseExitLastOrder,
+    orderWarehouseExitPostDelivery,
+    packingRankings,
+    packingOrders,
+    packingOrder,
+    provinceOrders,
+    manualOrderType,
+    manualOrderBarcodeStatuses,
+    manualOrderWarehouseExitLastOrder,
+    manualOrders,
+    manualOrder,
+    manualOrderWarehouseExits,
+    manualOrderProvinces,
+    manualOrderAwaitings,
+    centralExchanges,
+    centralExchange,
+    centralExchangeWorkers,
+    centralExchangeBoxes,
+    centralExchangeBox,
+    tickets,
+    ticketMessage,
+    ticketOperator,
+    ticketTypes,
+    ticketCategories,
+    ticketRoles,
+    ticketCloses,
+    ticketTemplates,
+    ticketPoints,
+    customers,
+    customer,
+    customerWalletTransactions,
+    walletsTransactions,
+    comments,
+    frequentlyQuestions,
+    frequentlyQuestion,
+    contactUsMessages,
+    contactUsMessage,
+    contentPositions,
+    contentPosition,
+    contentSliders,
+    brands,
+    brandLists,
+    groups,
+    groupColors,
+    groupAttributes,
+    groupParentAttributes,
+    groupLists,
+    periodLists,
+    productColors,
+    productCommerces,
+    productFiles,
+    productCarts,
+    products,
+    productAttributes,
+    productAttributeLists,
+    productModifyLogs,
+    productLogs,
+    brandWithProductList,
+    productPriceInfo,
+    formStep,
+    reloadList,
+    provinceLists,
+    cityLists,
+    postBranches,
+    postBranch,
+    postDDLBranches,
+    postCompanies,
+    reagentCodes,
+    discounts,
+    discountProducts,
+    discountCustomers,
+    discountCities,
+    discountSuppliers,
+    campaigns,
+    blogAuthors,
+    blogTags,
+    blogFaqs,
+    blogGroups,
+    blogContents,
+    blogComments,
+    roleSettings,
+    roleUsers,
+    roleSettingPage,
+    roleSettingUsers,
+    landingPages,
+    suppliers,
+    supplierList,
+    supplierWarehouses,
+    commercialRequests,
+    commercialDiscounts,
+    managementRequests,
+    commercialPricings,
+    financialRequests,
+    warehouseRequests,
+    discountDrafts,
+    discountDraftData,
+    managePages,
+    sepidarInvoices,
+    leaderBoards,
+    leaderBoardInfo,
+    gamesLists,
+    gamesInfo,
+    prizesLists,
+    prizesInfo,
+    eventsLists,
+    gamePrizes,
+    discountPrizes,
+    customerDiscounts,
+    productsConditions,
+    reagentConditions,
+    loginCounts,
+    profileConditions,
+    orderConditions,
+    priceConditions,
+    gameConditions,
+    prizeConditions,
+    questionnaireGroups,
+    questionnaireGroupDetail,
+    questionnaireQAS,
+    questionnaireQADetail,
+    questionnaireConditions,
+    discountCarts,
+    discountOrders,
+
+})
+
+export default reducer

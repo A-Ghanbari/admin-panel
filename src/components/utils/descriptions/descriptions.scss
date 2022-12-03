@@ -1,0 +1,15 @@
+.ant-descriptions-view{
+    border-radius: 8px !important;
+    border-color: var(--descriptions-border-color) !important;
+    .ant-descriptions-row{
+        border-color: var(--descriptions-border-color) !important;
+        .ant-descriptions-item-label{
+            background-color: var(--descriptions-item-background-color) !important;
+            border-color: var(--descriptions-border-color) !important;
+            color: var(--section-font-color) !important;
+        }
+        .ant-descriptions-item-content{
+            color: var(--section-font-color) !important;
+        }
+    }
+}

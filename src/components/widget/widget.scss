@@ -1,0 +1,17 @@
+
+.reports-widgets, .operations-widgets{
+    .section-card .ant-row{
+        margin: 8px 0px !important;
+    }
+    h1{
+        margin: 8px 0 16px ;
+        padding: 16px;
+        text-align: center;
+        font-size: 2em;
+        border-bottom: 1px solid var(--main-border-color);
+        color: #7e7e7e;
+    }
+    .accent-box{
+        font-size: 15px;
+    }
+}

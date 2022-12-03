@@ -1,0 +1,74 @@
+@use '/src/assets/sass/mixins';
+
+.register-order-info{
+    border-top: 1px solid #888;
+    margin-top: 32px;
+    padding: 16px 0;
+    .order-info{
+        margin-top: 16px;
+        // padding: 8px;
+        // text-align: center;
+        // border: 1px solid var(--accent-color);
+        // border-radius: 5px;
+        // background-color: #FCEDFD;
+    }
+}
+.label-counter{
+    margin: 32px 0;
+    .section-1 , .section-2{
+        @include mixins.flex($direction:column ,$justify:space-around);
+
+    }
+    .section-1{
+        border: 1px solid var(--accent-color);
+        border-radius: 5px;
+        padding: 8px;
+        height: 100%;
+        :last-child{
+            border: none !important;
+        }
+        div{
+            @include mixins.flex($justify:space-between);
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px dotted rgba(136, 136, 136, 0.476);
+        }
+    }
+    .section-2{
+        .action-button {
+            @include mixins.flex($justify:space-between);
+            .button{
+                margin: 0 !important;
+                width: 48%;
+                height: 46px;
+            }
+        }
+    }
+}
+.product-scan{
+    margin-bottom: 50px;
+}
+
+.complete {
+    pointer-events: none !important;
+    td{
+        background-color: var(--success-color) !important;
+        color: var(--primary-font-color) !important;
+    }
+}
+
+.completing {
+    pointer-events: none !important;
+    td{
+        color: var(--primary-font-color) !important;
+        background-color: var(--warning-light-color) !important;
+    }
+}
+
+.not-completed {
+    pointer-events: none !important;
+    td{
+        color: #fff !important;
+        background-color: var(--fail-color) !important;
+    }
+}

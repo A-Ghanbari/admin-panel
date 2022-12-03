@@ -1,0 +1,138 @@
+import Dashboard2LineIcon from 'remixicon-react/Dashboard2LineIcon'
+import AppsLineIcon from 'remixicon-react/AppsLineIcon'
+import FundsBoxLineIcon from 'remixicon-react/FundsBoxLineIcon'
+import FileList3LineIcon from 'remixicon-react/FileList3LineIcon'
+import Settings3LineIcon from 'remixicon-react/Settings3LineIcon'
+import ShutDownLineIcon from 'remixicon-react/ShutDownLineIcon'
+import MenuUnfoldFillIcon from 'remixicon-react/MenuUnfoldFillIcon'
+import MenuFoldFillIcon from 'remixicon-react/MenuFoldFillIcon'
+import EyeLineIcon from 'remixicon-react/EyeLineIcon'
+import Edit2LineIcon from 'remixicon-react/Edit2LineIcon'
+import MoreFillIcon from 'remixicon-react/MoreFillIcon'
+import BarcodeBoxLineIcon from 'remixicon-react/BarcodeBoxLineIcon'
+import BarcodeLineIcon from 'remixicon-react/BarcodeLineIcon'
+import FileExcel2LineIcon from 'remixicon-react/FileExcel2LineIcon'
+import PrinterLineIcon from 'remixicon-react/PrinterLineIcon'
+import LogoutBoxLineIcon from 'remixicon-react/LogoutBoxLineIcon'
+import LoginBoxLineIcon from 'remixicon-react/LoginBoxLineIcon'
+import FileAddLineIcon from 'remixicon-react/FileAddLineIcon'
+import FileEditLineIcon from 'remixicon-react/FileEditLineIcon'
+import MenuLineIcon from 'remixicon-react/MenuLineIcon'
+import SearchLineIcon from 'remixicon-react/SearchLineIcon'
+import ToolsFillIcon from 'remixicon-react/ToolsFillIcon'
+import ShoppingBag3LineIcon from 'remixicon-react/ShoppingBag3LineIcon'
+import ShoppingBasketLineIcon from 'remixicon-react/ShoppingBasketLineIcon'
+import Message2LineIcon from 'remixicon-react/Message2LineIcon'
+import Message3LineIcon from 'remixicon-react/Message3LineIcon'
+import TrophyLineIcon from 'remixicon-react/TrophyLineIcon'
+import FlagLineIcon from 'remixicon-react/FlagLineIcon'
+import SwapBoxLineIcon from 'remixicon-react/SwapBoxLineIcon'
+import TodoLineIcon from 'remixicon-react/TodoLineIcon'
+import NewspaperLineIcon from 'remixicon-react/NewspaperLineIcon'
+import TeamLineIcon from 'remixicon-react/TeamLineIcon'
+import UserVoiceLineIcon from 'remixicon-react/UserVoiceLineIcon'
+import UserSettingsLineIcon from 'remixicon-react/UserSettingsLineIcon'
+import FolderChartLineIcon from 'remixicon-react/FolderChartLineIcon'
+import TruckLineIcon from 'remixicon-react/TruckLineIcon'
+import StoreLineIcon from 'remixicon-react/StoreLineIcon'
+import Ticket2LineIcon from 'remixicon-react/Ticket2LineIcon'
+import CustomerService2FillIcon from 'remixicon-react/CustomerService2FillIcon'
+import CalendarTodoFillIcon from 'remixicon-react/CalendarTodoFillIcon'
+import MicrosoftFillIcon from 'remixicon-react/MicrosoftFillIcon'
+import MailSendFillIcon from 'remixicon-react/MailSendLineIcon'
+import DeleteBin6LineIcon from 'remixicon-react/DeleteBin6LineIcon'
+import LockPasswordFillIcon from 'remixicon-react/LockPasswordLineIcon'
+import Wallet3LineIcon from 'remixicon-react/Wallet3LineIcon'
+import UploadCloud2LineIcon from 'remixicon-react/UploadCloud2LineIcon'
+import More2FillIcon from 'remixicon-react/More2FillIcon'
+import Refund2LineIcon from 'remixicon-react/Refund2LineIcon'
+import IncreaseDecreaseLineIcon from 'remixicon-react/IncreaseDecreaseLineIcon'
+import GlobalLineIcon from 'remixicon-react/GlobalLineIcon'
+import Home6LineIcon from 'remixicon-react/Home6LineIcon'
+import PaletteLineIcon from 'remixicon-react/PaletteLineIcon'
+import ContrastDropLineIcon from 'remixicon-react/ContrastDropLineIcon'
+import Download2LineIcon from 'remixicon-react/Download2LineIcon'
+import ShoppingCartLineIcon from 'remixicon-react/ShoppingCartLineIcon'
+import GameLineIcon from 'remixicon-react/GameLineIcon'
+import QuestionnaireLineIcon from 'remixicon-react/QuestionnaireLineIcon'
+import GiftLineIcon from 'remixicon-react/GiftLineIcon'
+import MoneyDollarCircleLineIcon from 'remixicon-react/MoneyDollarCircleLineIcon'
+import LogoutCircleLineIcon from 'remixicon-react/LogoutCircleLineIcon'
+import CommunityLineIcon from 'remixicon-react/CommunityLineIcon'
+import PagesLineIcon from 'remixicon-react/PagesLineIcon'
+import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons'
+import { ReactComponent as Sepidar } from "assets/images/sepidar.svg"
+
+
+function getIcon(name, props) {
+    let icon = {
+        'dashboard': <Dashboard2LineIcon {...props} />,
+        'widgetsHolder': <AppsLineIcon {...props} />,
+        'excelExport': <FileExcel2LineIcon  {...props} />,
+        'widgets': <ToolsFillIcon {...props} />,
+        'managerialReports': <FolderChartLineIcon {...props} />,
+        'CRMReports': <UserVoiceLineIcon {...props} />,
+        'warehouseReports': <FundsBoxLineIcon {...props} />,
+        'orders': <FileList3LineIcon {...props} />,
+        'manualOrders': <CustomerService2FillIcon {...props} />,
+        'barcodeReader': <BarcodeBoxLineIcon {...props} />,
+        'accessories': <ShoppingBag3LineIcon {...props} />,
+        'palettes': <SwapBoxLineIcon {...props} />,
+        'tickets': <Ticket2LineIcon {...props} />,
+        'postSettings': <TruckLineIcon {...props} />,
+        'productCommentPage': <Message2LineIcon {...props} />,
+        'productsSection': <MicrosoftFillIcon {...props} />,
+        'marketers': <TeamLineIcon {...props} />,
+        'FAQsection': <FlagLineIcon {...props} />,
+        'commercial': <StoreLineIcon {...props} />,
+        'marketing': <TrophyLineIcon {...props} />,
+        'contents': <TodoLineIcon {...props} />,
+        'websiteBlog': <NewspaperLineIcon {...props} />,
+        'questionnaire': <QuestionnaireLineIcon {...props} />,
+        'roles': <UserSettingsLineIcon {...props} />,
+        'settings': <Settings3LineIcon {...props} />,
+        'barcodeList': <BarcodeLineIcon {...props} />,
+        'logOut': <LogoutCircleLineIcon {...props} />,
+        'setting': <Settings3LineIcon  {...props} />,
+        'exit': <LogoutBoxLineIcon {...props} />,
+        'enter': <LoginBoxLineIcon {...props} />,
+        'menuClose': <MenuUnfoldFillIcon {...props} />,
+        'menuOpen': <MenuFoldFillIcon {...props} />,
+        'menu': <MenuLineIcon  {...props} />,
+        'edit': <Edit2LineIcon  {...props} />,
+        'changeStatus': <FileEditLineIcon  {...props} />,
+        'ellipsis': <MoreFillIcon  {...props} />,
+        'eye': <EyeLineIcon  {...props} />,
+        'print': <PrinterLineIcon  {...props} />,
+        'add': <FileAddLineIcon  {...props} />,
+        'search': <SearchLineIcon  {...props} />,
+        "calendar": <CalendarTodoFillIcon {...props} />,
+        "post": <MailSendFillIcon {...props} />,
+        "delete": <DeleteBin6LineIcon {...props} />,
+        "lock": <LockPasswordFillIcon {...props} />,
+        "wallet": <Wallet3LineIcon {...props} />,
+        "plus": <PlusOutlined {...props} />,
+        "minus": <MinusCircleOutlined {...props} />,
+        "upload": <UploadCloud2LineIcon {...props} />,
+        "more": <More2FillIcon {...props} />,
+        "message": <Message3LineIcon {...props} />,
+        "sepidar": <MoneyDollarCircleLineIcon {...props} />,
+        "price": <Refund2LineIcon {...props} />,
+        "inventory": <IncreaseDecreaseLineIcon {...props} />,
+        "warehouse": <Home6LineIcon {...props} />,
+        "global": <GlobalLineIcon {...props} />,
+        "colors": <ContrastDropLineIcon {...props} />,
+        "color": <PaletteLineIcon {...props} />,
+        "download": <Download2LineIcon {...props} />,
+        "cart": <ShoppingCartLineIcon {...props} />,
+        "game": <GameLineIcon {...props} />,
+        "gift": <GiftLineIcon {...props} />,
+        "city": <CommunityLineIcon {...props} />,
+        "order": <ShoppingBasketLineIcon {...props} />,
+        "landingPage": <PagesLineIcon {...props} />,
+    }[name]
+
+    return icon || ''
+}
+
+export default getIcon

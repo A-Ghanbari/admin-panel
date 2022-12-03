@@ -1,0 +1,80 @@
+{
+    "name": "shavaz-panel",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-decoupled-document": "^35.2.1",
+        "@ckeditor/ckeditor5-react": "^5.0.2",
+        "@reduxjs/toolkit": "^1.7.1",
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^12.0.0",
+        "@testing-library/user-event": "^13.2.1",
+        "antd": "^4.18.3",
+        "axios": "^0.25.0",
+        "immutability-helper": "^3.1.1",
+        "js-cookie": "^3.0.1",
+        "lodash": "^4.17.21",
+        "moment-jalaali": "^0.9.6",
+        "pluralize": "^8.0.0",
+        "react": "^17.0.2",
+        "react-dnd": "15.1.2",
+        "react-dnd-html5-backend": "15.1.2",
+        "react-dom": "^17.0.2",
+        "react-multi-date-picker": "^3.3.0",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "6",
+        "react-scripts": "5.0.0",
+        "recharts": "^2.1.8",
+        "remixicon-react": "^1.0.0",
+        "sass": "^1.48.0",
+        "serve": "^14.0.1",
+        "web-vitals": "^2.1.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "storybook": "start-storybook -p 6006 -s public",
+        "build-storybook": "build-storybook -s public"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ],
+        "overrides": [
+            {
+                "files": [
+                    "**/*.stories.*"
+                ],
+                "rules": {
+                    "import/no-anonymous-default-export": "off"
+                }
+            }
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.4.17",
+        "@storybook/addon-essentials": "^6.4.17",
+        "@storybook/addon-links": "^6.4.17",
+        "@storybook/builder-webpack5": "^6.4.17",
+        "@storybook/manager-webpack5": "^6.4.17",
+        "@storybook/node-logger": "^6.4.17",
+        "@storybook/preset-create-react-app": "^4.0.0",
+        "@storybook/react": "^6.4.17",
+        "webpack": "^5.67.0"
+    }
+}

@@ -1,0 +1,34 @@
+.report-wallet{
+    margin-bottom: 30px;
+    .report-wallet-chart{
+        min-height: 200px;
+        .recharts-wrapper{
+            margin: 20px auto;
+            .recharts-layer path{
+                stroke:  var(--last-bar-color) !important;
+            }
+            .legend-item-0{
+                color: var(--current-bar-color) !important; 
+                svg path{
+                    stroke: var(--current-bar-color) !important
+                }
+            }
+            .recharts-tooltip-item:nth-child(1){
+                color:  var(--current-bar-color)  !important;
+            }
+            
+            .last-bar{
+                fill: var(--last-bar-color) !important
+            }               
+            .legend-item-1{
+                color:  var(--last-bar-color) !important; 
+                svg path{
+                    stroke:  var(--last-bar-color) !important
+                }
+            }
+            .recharts-tooltip-item:nth-child(2){
+                color:  var(--last-bar-color) !important;
+            }
+        }
+    }
+}

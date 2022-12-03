@@ -1,0 +1,145 @@
+@use '/src/assets/sass/mixins';
+
+@import "/src/assets/css/general.css";
+@import "/src/assets/css/all.min.css";
+
+@import "/src/assets/sass/header.scss";
+@import "/src/assets/sass/sidebar.scss";
+@import "/src/assets/sass/content.scss";
+@import "/src/assets/sass/footer.scss";
+
+@import "/src/assets/sass/icons.scss";
+
+//----------------general---------------
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}
+.left{
+    text-align: left !important;
+}
+.right{
+    text-align: right !important;
+}
+.center{
+    text-align: center !important;
+}
+.small{
+    font-weight: 100;
+    font-size: .9em;
+}
+.ltr{
+    direction: ltr ;
+}
+.rtl{
+    direction: rtl;
+}
+.section-card{
+    position: relative;
+    background-color: var(--section-background-color);
+    border-radius: 16px;
+    padding: 8px;
+    padding-left: 24px;
+    box-shadow:var(--section-box-shadow);
+    margin-bottom: 20px;
+}
+.form-card{
+    position: relative;
+    background-color: var(--section-background-color);
+    border: var(--section-border);
+    border-radius: 5px;
+    padding: 16px 32px;
+    box-shadow:var(--section-box-shadow);
+    margin-bottom: 20px;
+}
+.scroll-x{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--section-font-color);
+}
+.actions {
+    a, span {
+        cursor: pointer;
+        display: inline !important;
+        color: var(--card-action-color);
+        padding: 0 4px;
+        svg{
+            width: 20px;
+        }
+        &:hover {
+            color: var(--accent-color);
+            margin-top: -3px;
+        }
+        div{
+            display: inline !important;
+        }
+    }
+}
+span svg{
+    vertical-align: middle !important;
+}
+.accent{
+    color:var(--accent-color)
+}
+.success{
+    color:var(--success-color)
+}
+.warning{
+    color:var(--warning-color)
+}
+.fail{
+    color:var(--fail-color)
+}
+.approved::after{
+    font-family: FontAwesome;
+    font-size: 2em;
+    content: "\2713";
+    color: green;
+}
+.unapproved::after{
+    font-family: FontAwesome;
+    font-size: 2em;
+    content: "\2715";
+    color: red;
+}
+.awaiting::after{
+    font-family: FontAwesome;
+    font-size: 1.7em;
+    content: "\f1da";
+    color: #dfc60a;
+}
+.filter-form{
+    @include mixins.flex($direction:column !important);
+    .ant-row{
+        row-gap: 0 !important;
+    }
+    .button{
+        margin-top: 16px;
+    }
+}
+.accent-box{
+    background-color: var(--accent-box-color);
+    border: 1px solid var(--accent-light-color);
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+.hidden{
+    display: none;
+}
+.flex-row{
+    @include mixins.flex($justify: space-between , $align:center);
+    flex-wrap: wrap;
+}
+.ant-row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.height-scroll{
+    max-height: 50vh;
+    overflow: auto;
+}

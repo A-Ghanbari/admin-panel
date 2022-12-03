@@ -1,0 +1,102 @@
+@use '/src/assets/sass/mixins';
+.error-boundary {
+    @include mixins.flex($direction: column, $align: center);
+    background-color: #0e1c21;
+    height: 100vh;
+    h2 {
+        color: #fff;
+        text-align: center;
+        direction: rtl;
+        @media (max-width: 576px) {
+            font-size: 1.2em;
+            padding: 20px;
+        }
+    }
+
+    .error-boundary-img {
+        position: relative;
+        width: 500px;
+        height: 250px;
+        align-items: center;
+        @media (max-width: 576px) {
+            width: 280px;
+            height: 200px;
+        }
+        overflow: hidden;
+        .error-boundary-img1,
+        .error-boundary-img2,
+        .error-boundary-img3,
+        .error-boundary-img4 {
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            @media (max-width: 576px) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        .error-boundary-img1,
+        .error-boundary-img4 {
+            animation: animate1 5s linear forwards infinite;
+            animation-play-state: running;
+            @keyframes animate1 {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        .error-boundary-img2,
+        .error-boundary-img3 {
+            z-index: 1;
+            animation: animate2 5s linear forwards infinite;
+            animation-play-state: running;
+            @keyframes animate2 {
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+        .error-boundary-img1 {
+            background-image: url("/assets/images/gear1.svg");
+            background-size: 200px;
+            top: 0;
+            right: 60px;
+            @media (max-width: 576px) {
+                background-size: 150px;
+                right: 0;
+            }
+        }
+        .error-boundary-img2 {
+            background-image: url("/assets/images/gear2.svg");
+            background-size: 120px;
+            right: 180px;
+            top: 0;
+            @media (max-width: 576px) {
+                background-size: 90px;
+                right: 90px;
+            }
+        }
+        .error-boundary-img3 {
+            background-image: url("/assets/images/gear3.svg");
+            background-size: 80px;
+            top: 80px;
+            right: 150px;
+            @media (max-width: 576px) {
+                background-size: 70px;
+                right: 70px;
+            }
+        }
+        .error-boundary-img4 {
+            background-image: url("/assets/images/gear4.svg");
+            background-size: 150px;
+            top: 40px;
+            right: 250px;
+            @media (max-width: 576px) {
+                background-size: 110px;
+                right: 140px;
+            }
+        }
+    }
+}

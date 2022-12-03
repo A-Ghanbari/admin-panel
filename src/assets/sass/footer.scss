@@ -1,0 +1,17 @@
+.footer{
+  padding: 0;
+  margin-top: 60px;
+  background-color: var(--content-background-color) !important;
+  h4{
+      display: block;
+      padding-top: 16px;
+      border-top: 1px solid var(--section-font-color);
+      text-align: center;
+      @media (max-width:576px) {
+        font-size: 0.9em;
+      }
+      @media (max-width:380px) {
+        font-size: 0.8em;
+      }
+  }
+}

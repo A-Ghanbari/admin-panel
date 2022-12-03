@@ -1,0 +1,7 @@
+.ant-divider-inner-text{
+    color: var(--section-font-color);
+}
+
+.ant-divider-horizontal.ant-divider-with-text:after, .ant-divider-horizontal.ant-divider-with-text:before{
+    border-color: var(--secondary-light-color) !important;
+}

@@ -1,0 +1,70 @@
+.ant-pagination{
+    margin: 20px 0 !important;
+    li ,  li button,li div {
+        border-radius: 8px !important;
+        a{
+            border-radius: 8px;
+        }
+    }
+    li , li button , li div ,li a , li a div span{
+        transition: none !important;
+        background-color: var(--pagination-background-color) !important;
+        color: var(--pagination-font-color) !important;
+        box-shadow: none !important;
+        margin-bottom: 5px;
+        &:hover{
+            color: var(--pagination-active-color) !important;
+            border-color: var(--accent-color) !important;
+            font-weight: bold;
+        }
+        button span{
+            vertical-align: middle;
+            margin-bottom: 8px;
+        }
+        .ant-select-item:hover{
+            >div{
+                color: var(--pagination-active-color) !important;
+                font-weight: bold;
+            }
+        }
+        .ant-select-item-option-selected{
+            >div{
+                color: var(--pagination-active-color) !important;
+            }        
+        }
+    }
+    .ant-pagination-item-ellipsis{
+        border-radius: 8px;
+    }
+    .anticon-double-left{
+        vertical-align: middle !important;
+    }
+    .ant-pagination-options {
+        .ant-select , .ant-select-selector{
+            margin: 0 !important;
+        }
+    }
+    .ant-pagination-item-active {
+        border: 1px solid var(--pagination-active-color) !important;
+        a{
+            color: var(--primary-font-color) !important;
+            background-color: var(--pagination-active-color) !important;
+            border-radius: 6px;
+            &:hover{
+                color: var(--primary-font-color) !important;
+            }
+        }
+    }
+    .ant-select-selector{
+        border: none !important;
+        .ant-select-selection-item{
+            transition: none !important;
+        }
+    }
+    .ant-select-arrow{
+        color: var(--accent-color) !important;
+    }
+    .ant-pagination-item{
+        font-family: vazir !important;
+    }
+}

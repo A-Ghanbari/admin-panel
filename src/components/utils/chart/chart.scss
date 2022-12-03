@@ -1,0 +1,22 @@
+.recharts-tooltip-cursor {
+    fill: #cccccc40 !important;
+}
+.recharts-default-tooltip{
+    background-color: var(--chart-tooltip-background-color)!important;
+}
+.recharts-brush {
+    rect:nth-child(1){
+        fill: var(--chart-brush-background-color) !important;
+        stroke: #000 !important;
+    }   
+    rect:nth-child(2){
+        fill: var(--chart-brush-color) !important;
+        stroke: var(--chart-brush-color) !important;
+    }      
+    .recharts-brush-texts text{
+        fill: var(--accent-color) !important;
+    }
+}
+.recharts-cartesian-axis-tick text{
+    fill: var(--accent-color) !important;
+}

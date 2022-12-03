@@ -1,0 +1,21 @@
+@use '/src/assets/sass/mixins';
+
+.discount-product-list{
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.input-table-form {
+    @include mixins.flex($justify: flex-start, $align: center);
+    flex-wrap: nowrap;
+    .ant-input-number{
+        margin: 5px !important;
+    }
+    
+    .button {
+        margin: 0 5px !important;
+        width: 60px !important;
+        min-width: 60px !important;
+        height: 48px;
+    }
+}

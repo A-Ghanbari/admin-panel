@@ -1,0 +1,44 @@
+@mixin input {
+    position: relative;
+    padding: 8px 8px 0;
+    background-color: #00000000 !important;
+    color: var(--section-font-color);
+    box-sizing: border-box;
+    width: 100% !important;
+    min-width: 200px !important;
+    height: 48px !important;
+    margin: 18px 0 0 !important;
+    text-align: right;
+    border-color: #7e7e7e !important;
+    border: 1px solid #c5c5c5 !important;
+    transition: none !important;
+    border-radius: 8px !important;
+}
+
+@mixin input-focus {
+    &:hover {
+        z-index: 0 !important;
+    }
+    &:focus-within {
+        box-shadow: var(--input-box-shadow)!important;
+        border-radius: 0;
+        transition: none !important;
+        z-index: 0 !important;
+        &::after {
+            content: "" !important;
+            visibility: visible !important;
+            position: absolute;
+            top: 0;
+            width: 90% !important;
+            left: 0;
+            box-shadow: var(--input-box-shadow)!important;
+        }
+    }
+}
+
+@mixin flex($direction: row, $justify: center, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,0 +1,79 @@
+@use '/src/assets/sass/mixins';
+
+.cascader{
+    .ant-select-selector {
+        @include mixins.input ;
+        @include mixins.input-focus;
+        .ant-select-selection-item {
+            padding: 8px 0 !important;
+            }
+        }
+        .ant-select-arrow {
+            color: var(--accent-color) !important;
+            top: 40px !important;
+        }
+        .ant-select-selection-search-input{
+            padding-top: 16px !important;
+        }
+        .ant-select-clear{
+            display: none !important;
+        }
+        .ant-select-selection-placeholder{
+            padding-top: 8px !important;
+    }
+    
+}
+.ant-select-multiple .ant-select-selector {
+    height: auto !important;
+    min-height: 48px;
+    padding: 8px !important;
+    .ant-select-selection-item {
+        padding: 2px !important;
+        border-radius: 4px;
+        color: var(--primary-font-color);
+        background-color: var(--accent-light-color);
+    }
+    .ant-select-selection-item-remove span{
+        color: var(--primary-font-color);
+        vertical-align: middle;
+    }
+    input{
+        padding: 0 !important;
+    }
+}
+.ant-cascader-dropdown{
+    background-color: var(--select-background-color) !important;
+    .ant-cascader-menu{
+        border: none !important;
+        .ant-cascader-menu-item{
+            color: var( --section-font-color) !important;
+            &:hover{
+                background-color: #00000000 !important;
+                color: var(--accent-color) !important;
+                .anticon-left{
+                    svg{
+                        color: var( --accent-color) !important;
+                    }
+                }
+            }
+            .anticon-left{
+                svg{
+                    color: var( --section-font-color) !important;
+                }
+            }
+        }
+        .ant-cascader-menu-item-active{
+            background-color: var(--accent-color) !important;
+            color: var( --primary-font-color) !important;
+            &:hover{
+                background-color: var(--accent-color) !important;
+                color: var( --primary-font-color) !important;
+            }
+            .anticon-left{
+                svg{
+                    color: var( --primary-font-color) !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.ant-modal{
+    width: 80vw !important;
+    .ant-modal-mask{
+        background-color: #000000c7 !important;
+    }
+    .ant-modal-content{
+        background-color: var(--section-background-color) !important;
+        border: 1px solid var(--accent-color) !important;
+        border-radius: 16px !important;
+    }
+    .ant-modal-footer{
+        border: none !important;
+    }
+}

@@ -1,0 +1,30 @@
+.ant-tabs{
+    overflow: visible !important;
+    .ant-tabs-nav{
+        &::before{
+            border-color: var(--accent-color) !important;
+        }
+    }
+    .ant-tabs-tab{
+        background-color: var(--descriptions-item-background-color) !important;
+        border: none !important;
+        transition: none !important;
+        border-bottom: 1px solid var(--accent-color) !important;
+        color: var(--section-font-color) !important;
+        border-top-left-radius: 7px !important;
+        border-top-right-radius: 7px !important;
+        &:hover{
+            color: var(--accent-color) !important;
+            transition: none !important;
+        }
+        .ant-tabs-tab-btn:active{
+            color: var(--accent-color) !important;
+        }
+    }
+    .ant-tabs-tab-active{
+        background-color: var(--accent-color) !important;
+        .ant-tabs-tab-btn{
+            color: var(--primary-font-color) !important;
+        }
+    }
+}

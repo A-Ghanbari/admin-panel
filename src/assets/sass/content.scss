@@ -1,0 +1,31 @@
+@use '/src/assets/sass/mixins';
+
+.ant-layout-content {
+    background-color: var(--content-background-color) !important;
+    color: var(--section-font-color);
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    @media (max-width: 800px) {
+        padding-top: 136px;
+    }
+    padding-top: 74px;
+    .content {
+        @include mixins.flex($direction: column, $justify: space-between);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100%;
+        padding: 16px 16px 0;
+        @media (max-width: 576px) {
+            padding: 16px;
+        }
+        @media screen and (min-width: 768px) {
+            margin-right: 50px;
+        }
+    }
+    .content-close-sidebar {
+        @media screen and (min-width: 768px) {
+            margin-right: 50px;
+        }
+    }
+}

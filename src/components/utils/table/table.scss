@@ -1,0 +1,87 @@
+.table {
+    margin-bottom: 20px !important;
+    border-radius: 16px;
+    box-shadow: var(--main-box-shadow);
+    .ant-spin-dot-item{
+        background-color: var(--accent-color) !important;
+    }
+    .ant-table-placeholder .ant-table-cell{
+        &:hover{
+            background-color: #00000000 !important;
+        }
+    }
+    .ant-empty-description{
+        color: var(--table-text-color) !important;
+    }
+    .ant-table{
+        background-color: #00000000 !important;
+        .ant-table-container,table{
+            border: none !important;
+        }
+    }
+    thead tr th{
+        text-align: center !important;
+        background-color: var(--table-header-background-color) ;
+        color: #fff;
+        max-height: 57px !important;
+    }
+    .ant-table-measure-row{
+        display: none ;
+    }
+    tr{
+        td{
+            padding: 16px 8px ;
+        }
+        td , th{
+            transition: none !important;
+            text-align: center;
+            white-space: nowrap;
+            color: var(--table-text-color);
+            font-size: 12px;
+            font-weight: 500;
+            border-color:var(--table-border-color) !important ;
+        }
+        &:nth-child(2n+1) {
+            td{
+                background-color: var(--table-row-background-color) ;
+            }
+            .ant-form-item-label > label{
+                background-color: var(--table-row-background-color) !important;
+            }
+            &:hover td{
+                background-color: var(--table-row-background-color) !important;
+            }
+        }
+        &:nth-child(2n) {
+            td{
+                background-color: var(--table-row-odd-background-color) ;
+            }
+            &:hover td{
+                background-color: var(--table-row-odd-background-color)  !important;
+            }
+        }
+    }
+    .ant-table-cell{
+
+        border:none !important ;
+    }
+    .ant-table-footer{
+        background-color: #00000000 !important;
+        color: var(--table-text-color) !important;
+        border:none !important ;
+    }
+    .ant-tag{
+        border-radius: 10% !important;
+        border-color: var(--accent-color) !important;
+        background-color: var(--header-background-color);
+        color: var(--accent-color) !important;
+    }
+}
+.ant-table-wrapper {
+    margin: 0 !important;
+}
+
+.table-title{
+    min-width: 400px !important;
+    white-space: pre-wrap !important;
+}

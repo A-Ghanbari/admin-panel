@@ -1,0 +1,108 @@
+@use '/src/assets/sass/mixins';
+
+.ant-input , textarea .ant-input{
+    background-color: #00000000 !important;
+    color: var(--section-font-color) !important;
+}
+
+.ant-input-affix-wrapper ,.ant-input-textarea{
+    @include mixins.input
+}
+
+ .ant-input-password , .input {
+    transition: none !important;
+    @include mixins.input-focus
+}
+
+.ant-input-password-icon{
+    color: var(--section-font-color) !important;
+}
+textarea{
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    min-height: 38px !important;
+}
+.ant-input-textarea-show-count:after{
+    color: #777 !important;
+    margin: 0 !important;
+}
+.ant-input-textarea{
+    height: auto !important;
+    padding-left: 0 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--section-font-color) !important;
+    transition: background-color 9000s ease-in-out 0s;
+}
+
+.ant-input-search{
+   max-width: 250px;
+   background-color: var(--section-background-color) !important;
+   border: var(--section-border);
+   border-radius: 50px;
+   .ant-input{
+       border-radius: 50%;
+       border: none;
+       background-color: #00000000;
+       color: var(--accent-color);
+       &:focus-within{
+           box-shadow: none;
+        }
+   }
+   .ant-input-group-addon{
+           background-color: #00000000;
+       .ant-input-search-button{
+           background-color: #00000000;
+           border: none ;
+           
+           .anticon-search{
+               color: var(--accent-color);
+               
+           }
+        }
+    }
+}
+.ant-input-clear-icon{
+    color: var(--accent-color) !important;
+    svg{
+        font-size: 14px;
+    }
+}
+.ant-input-number{
+    @include mixins.input;
+    @include mixins.input-focus;
+    .ant-input-number-handler-wrap{
+        height: 80% !important;
+        top: 5px;
+        left: 7px !important;
+        background-color: #00000000 !important;
+        span{
+            border-right: none !important;
+            border-color: var(--accent-color) !important;
+            color: var(--section-font-color) !important;
+            font-size: 1.2em !important;
+        }
+    }
+}
+.ant-input-number-input {
+    width: 100%;
+    height: 46px !important;
+    padding: 8px 10px !important;
+    color: var(--section-font-color) !important;
+}
+.ant-input-number-handler:hover {
+    .ant-input-number-handler-up-inner ,.ant-input-number-handler-down-inner {
+        color: var(--accent-color) !important;
+    }
+}
+.ant-transfer-list-search{
+    @include mixins.input;
+}
+.ant-input-affix-wrapper-focused,.ant-input-affix-wrapper:focus {
+    box-shadow: var(--input-box-shadow)!important;
+}

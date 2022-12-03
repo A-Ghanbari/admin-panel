@@ -1,0 +1,25 @@
+.ant-collapse {
+    position: relative;
+    background-color: var(--collapse-header-background-color) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 8px;
+    box-shadow: var(--section-box-shadow);
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    .ant-collapse-header {
+        color: var(--section-font-color) !important;
+        font-size: 1.2em;
+    }
+    .ant-collapse-content {
+        border-bottom-right-radius: 8px !important;
+        border-bottom-left-radius: 8px !important;
+        background-color: var(--collapse-background-color) !important;
+    }
+    .ant-collapse-item {
+        border: none !important;
+    }
+    .button {
+        margin: 0 auto;
+    }
+}

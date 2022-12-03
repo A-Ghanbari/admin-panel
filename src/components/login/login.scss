@@ -1,0 +1,60 @@
+@use '/src/assets/sass/mixins';
+.login-page {
+    @include mixins.flex($align: center);
+    height: 100vh;
+    background-image: url("/assets/images/login-bg.png");
+    background-size: cover;
+    background-position: center;
+
+    .login-form-card {
+        width: 32%;
+        max-width: 400px;
+        min-width: 300px;
+        background-color: var(--section-background-color);
+        padding: 16px 32px 32px;
+        border-radius: 16px;
+        box-shadow: 0px 5px 15px 1px #00000010;
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $align: center
+        );
+        height: 80vh;
+        max-height: 500px;
+        @media screen and (max-width: 767px) {
+            height: 70vh;
+            max-width: 350px;
+        }
+        .login-form-logo {
+            background-image: var(--login-logo);
+            width: 150px;
+            height: 96px;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex: 2;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+        }
+        .button {
+            margin-top: 30px;
+            height: 48px !important;
+            border-radius: 8px !important;
+            background-color: var(--shavaz-color) !important;
+            &:hover{
+                background-color: var(--shavaz-light-color) !important;
+            }
+        }
+        .form-item .ant-form-item-label > label{
+            color: var(--shavaz-color) !important;
+        }
+        .input{
+            border-color: var(--shavaz-color) !important;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 250px;
+            @include mixins.flex($direction: column);
+        }
+    }
+}

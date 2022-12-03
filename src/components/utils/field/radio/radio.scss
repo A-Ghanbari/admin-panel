@@ -1,0 +1,12 @@
+.ant-radio-wrapper{
+    color: var(--section-font-color) !important;
+}
+.ant-radio-checked .ant-radio-inner {
+    border-color: var(--accent-color) !important;
+}
+.ant-radio-inner:after {
+    background-color: var(--accent-color) !important;
+}
+.ant-radio:hover .ant-radio-inner {
+    border-color: var(--accent-color) !important;
+}

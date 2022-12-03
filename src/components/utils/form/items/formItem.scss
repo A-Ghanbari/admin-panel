@@ -1,0 +1,71 @@
+@use '/src/assets/sass/mixins';
+
+.form-item{
+    position: relative;
+    .ant-form-item-label {
+        position: absolute !important;  
+        top: 5px !important;
+        right: 8px;
+        z-index: 1;
+        >label{
+            font-size: .9em;
+            background-color: var(--section-background-color) !important;
+            height: 20px;
+            color: var(--accent-color);
+            padding: 2px;
+            user-select: none
+        }
+        >label::after , >label::before{
+            content: none !important;
+        }
+    }
+}
+.ant-form-item{
+    margin: 0;
+}
+.color-input-color-less{
+    @include mixins.flex($justify: space-between , $align:center);
+    border: 1px solid #c5c5c5 !important;
+    padding: 0 8px;
+    border-radius: 8px !important;    
+    margin-top: 18px;
+    max-height: 48px;
+    .colorpick-eyedropper-input-trigger{
+        display: none !important;
+    }
+}
+
+.color-input{
+    @include mixins.flex($justify: space-between , $align:center);
+    border-radius: 8px !important;    
+    width: 100%;
+    .ant-row{
+        width: 100% !important;
+    }
+    .ant-input-suffix{
+        display: none !important;
+    }
+    .ant-form-item-label {
+        position: absolute !important;  
+        top: 5px !important;
+        right: 18px;
+        z-index: 1;
+        >label{
+            font-size: .9em;
+            background-color: var(--section-background-color) !important;
+            height: 20px;
+            color: var(--accent-color);
+            padding: 2px;
+            user-select: none
+        }
+        >label::after , >label::before{
+            content: none !important;
+        }
+    }
+    .ant-input{
+        margin: auto 0 !important;
+    }
+    .colorpick-eyedropper-input-trigger{
+        display: none !important;
+    }
+}

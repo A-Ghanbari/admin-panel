@@ -1,0 +1,28 @@
+@use '/src/assets/sass/mixins';
+.list-card {
+    padding: 16px 8px !important;
+    .card {
+        img {
+            width: auto;
+            max-height: 42px;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+        .ant-card-body {
+            ul {
+                border-radius: 5px;
+                list-style: none;
+                padding: 16px;
+                margin: 0;
+                line-height: 28px;
+                li {
+                    text-align: left;
+                    @include mixins.flex($justify: space-between);
+                    word-wrap: break-word;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

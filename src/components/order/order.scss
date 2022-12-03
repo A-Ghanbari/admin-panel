@@ -1,0 +1,30 @@
+@use '/src/assets/sass/mixins';
+
+.edit-form{
+    margin: 0 !important;
+    @include mixins.flex($direction:column !important);
+    .button{
+        margin: 0 auto;
+    }
+}
+.table {
+    .ant-select-selector{
+        margin-top: 0 !important;
+    }
+    .ant-select-arrow{
+        top: 22px !important;
+    }
+}
+.order-barcode-status{
+    margin-top: 70px !important;
+}
+.waiting-code-wrapper{
+    margin-top: 32px;
+    .waiting-code-list{
+        color: var(--section-font-color) !important;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid var(--accent-color);
+        border-radius: 4px;
+    }
+}

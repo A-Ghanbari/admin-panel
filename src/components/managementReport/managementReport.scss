@@ -1,0 +1,10 @@
+.management-card{
+    padding: 16px !important;
+    h1{
+        color: var(--section-font-color) !important;
+        padding: 8px;
+        span{
+            color: var(--accent-color);
+        }
+    }
+}

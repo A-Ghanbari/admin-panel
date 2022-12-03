@@ -1,0 +1,1 @@
+export { RenderRoutes as default } from 'routes/RenderRoutes'

@@ -1,0 +1,129 @@
+@use '/src/assets/sass/mixins';
+
+.change-count{
+    direction: ltr;
+}
+
+.product-overview {
+    text-align: center;
+    img{
+        width: 300px;
+        max-width: 300px;
+        border-radius: 5px;
+        box-shadow: 0 5px 30px 1px var(--shadow-color);
+        margin-bottom: 32px;
+    }
+}
+.product-photo{
+    @include mixins.flex($justify:flex-start ,$align:center,$direction:column);
+    >img{
+        max-width: 400px;
+        max-height: 400px;
+        border-radius: 5px;
+        box-shadow: 0 5px 30px 1px var(--shadow-color);
+        margin:0 0 32px 32px;
+    }
+    .product-photo-gallery{
+        @include mixins.flex($justify:flex-start ,$align:center);
+        overflow: auto;
+        img{
+            width: 70px;
+            border:1px solid rgba(136, 136, 136, 0.365);
+            border-radius: 5px;
+            margin:0 0 8px 8px;
+        }
+    }
+}
+.product-preview{
+    text-align: center;
+    h1{
+        text-align: right;
+    }
+    iframe{
+        width: 90%;
+        max-width: 1200px;
+        min-height: 500px;
+    }
+}
+
+.brand-logo{
+    @include mixins.flex($justify:flex-start ,$align:center,$direction:column);
+    img{
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 5px;
+        box-shadow: 0 5px 30px 1px var(--shadow-color);
+        margin:0 0 32px 32px;
+    }
+    h4{
+        color: var(--fail-color);
+        cursor: pointer;
+    }
+}
+
+.product-barcode-list{
+    direction: ltr !important;
+    .ant-input-prefix{
+        color: red;
+    }
+}
+
+.group-color-table{
+    max-height: 55vh;
+    overflow: scroll;
+}
+
+.product-log{
+    .title , .cols{
+        text-align: center;
+        padding: 0 !important;
+        div{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            span{
+                flex: 1;
+                padding: 16px 24px;
+            }
+            :nth-child(1){
+                border-left: 1px solid var(--descriptions-border-color);
+            }
+            img{
+                border:none !important;
+            }
+        }
+    }
+    .ant-descriptions-item-label {
+        white-space: pre !important;
+        padding: 16px 24px !important;
+    }
+    .title{
+        background-color: var(--descriptions-item-background-color) !important;
+    }
+}
+
+.change-count-form{
+    @include mixins.flex($justify:flex-start ,$align:center);
+    flex-wrap: nowrap;
+    >div{
+        margin: 0 6px !important;
+        text-align: right;
+    }
+    .ant-input-number ,.ant-select {
+        margin: 18px 0 !important;
+    }
+    .button{
+        width: 50px !important;
+        min-width: 50px !important;
+        background-color: #00000000 !important;
+        color: var(--accent-color) !important;
+        box-shadow: none !important;
+        &:hover{
+            color: var(--accent-light-color) !important;
+        }
+    }
+}
+
+.group-attribute-table .ant-select{
+    margin-top: 18px;
+}

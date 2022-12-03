@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "vazir";
+  src: url("/assets/fonts/Vazir-Thin.ttf");
+  src: url("/assets/fonts/Vazir-FD.woff2") format("woff2"),
+    url("/assets/fonts/Vazir-FD.woff") format("woff"),
+    url("/assets/fonts/Vazir-FD.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/assets/fonts/IRANSansXFaNum-Light.woff2");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "IRANSans";
+  src: url("/assets/fonts/IRANSansXFaNum-Regular.woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "IRANSans";
+  src: url("/assets/fonts/IRANSansXFaNum-Medium.woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "IRANSans";
+  src: url("/assets/fonts/IRANSansXFaNum-Bold.woff2");
+  font-weight: 700;
+}
+
+.light {
+  --login-background-color: #cfcfcf;
+  --header-background-color: #fff;
+  --content-background-color: #f8f8f8;
+  /* --sidebar-header-background-color: #5d1270; */
+  --sidebar-background-color: #ffffff;
+  --primary-background-color: #f1d4d4;
+  --section-background-color: #fff;
+  --primary-font-color: #f2faff;
+  --section-font-color: #000000;
+  --scrollbar-color: #dae2f3;
+  --shavaz-color: #C4268F;
+  --shavaz-light-color: #b81a83;
+  --accent-color: #ea7a9a;
+  --accent-light-color: #B9274B;
+  --primary-color: #FFDFDF;
+  --primary-light-color: #fcd3d3;
+  --secondary-color: #3E3F7A;
+  --secondary-light-color: #7172a8;
+  --warning-color: #b06f01;
+  --warning-light-color: #d58c10;
+  --success-color: #007c38;
+  --success-light-color: #169e8a;
+  --accent-box-color: #fdf6ff;
+  --fail-color: #cc0d1b;
+  --fail-light-color: #e61e2d;
+  /* --test1-color: #FFDFDF; 
+   --test2-color: #3E3F7A;
+  --test3-color: #D37E93;
+  --test4-color: #E2AEC9;
+  --test5-color: #C588A6;
+  --test6-color: #FBE8EE;  */
+  --sidebar-text-color: #7e7e7e;
+  --sidebar-text-active-color: #fff;
+  --sidebar-text-hover-color: #ea7a9a;
+  --sidebar-border-color: #db5878;
+  --widgets-text-color: #000000;
+  --notfound-primary-color: #ea7a9a;
+  --notfound-secondary-color: #B9274B;
+  --table-header-background-color: #ea7a9a;
+  --table-row-background-color: #ffefef;
+  --table-row-odd-background-color: #fff;
+  --table-border-color: #7e7e7e;
+  --table-text-color: #000;
+  --collapse-header-background-color: #fdfdff;
+  --collapse-background-color: #fff;
+  --card-background-color: #ffffff;
+  --card-action-color: #3E3F7A;
+  --card-border-color: #3E3F7A;
+  --card-font-color: #000000;
+  --card-post-img: brightness(40%);
+  --login-logo: url("/assets/images/shavazLogo/login-light-logo.svg");
+  --shavaz-logo: url("/assets/images/shavazLogo/light-logo.svg");
+  --collapsed-logo: url("/assets/images/shavazLogo/collapsed-light-logo.svg");
+  --main-box-shadow: 0 0 10px hsl(210deg 8% 51% / 13%);
+  --section-box-shadow: 0px 5px 15px 1px #00000010;
+  --input-box-shadow: 0 0 5px 1px #e3e3e3;
+  --main-border-color:#c2c2c2;
+  --section-border: 1px solid #c2c2c2;
+  --pagination-background-color: #fff;
+  --pagination-font-color: #000;
+  --pagination-active-color: #3E3F7A;
+  --theme-icon: url("/assets/images/icons/light/icon-theme-light.svg");
+  --sidebar-header-background: url("/assets/images/sidebar-head-light.svg");
+  --dark-bold: 300;
+  --descriptions-border-color: #F0F0F0;
+  --descriptions-item-background-color: #f8f8f8;
+  --select-background-color: #fff3f3;
+  --current-bar-color: #D37E93;
+  --last-bar-color: #3E3F7A;
+  --chart-tooltip-background-color: #f8f8f8;
+  --chart-brush-background-color: #f0f0ff;
+  --chart-brush-color: #3E3F7A;
+  --rank-card-background-color: #3E3F7A;
+  --shadow-color: #eee;
+  --admin-message-color: #ffe7fd;
+  --customer-message-color: #efefef;
+}
+
+.dark {
+  --login-background-color: #181818;
+  --header-background-color: #192133;
+  --content-background-color: #161b26;
+  --primary-background-color: #16292f;
+  --sidebar-background-color: #192133;
+  --sidebar-header-background-color: #00eeff;
+  --section-background-color: #192133;
+  --primary-font-color: #16292f;
+  --section-font-color: #c1c7d6;
+  --scrollbar-color: #000000;
+  --primary-color: #FB2576;
+  --primary-light-color: #2eb9c3;
+  --accent-color: #FB2576;
+  --accent-light-color: #2eb9c3;
+  --secondary-color: #c2fbff;
+  --secondary-light-color: #ffffff;
+  --accent-box-color: #002325;
+  --warning-color: #d78800;
+  --warning-light-color: #ffa200;
+  --success-color: #00b953;
+  --success-light-color: #00a74b;
+  --fail-color: #cc0d1b;
+  --fail-light-color: #e61e2d;
+  --sidebar-text-color: #c1c7d6;
+  --sidebar-text-active-color: #FB2576;
+  --sidebar-text-hover-color: #ff629e;
+  --sidebar-border-color: #4a4a4a;
+  --widgets-background-color: #0c6066;
+  --widgets-background-light-color: #058376;
+  --widgets-text-color: #fff;
+  --notfound-primary-color: #0c6066;
+  --notfound-secondary-color: #36eefc;
+  --widgets-card-shadow: 0px 2px 4px 1px #00a796;
+  --widgets-card-shadow-hover: 0px 0px 6px 4px #007c70;
+  --input-box-shadow: 0 0 5px 1px #0c6066;
+  --table-header-background-color: #0c6066;
+  --table-row-background-color: #172529;
+  --table-row-odd-background-color: #0e1c21;
+  --table-border-color: #272727;
+  --table-text-color: #fff;
+  --collapse-header-background-color: #172529;
+  --collapse-background-color: #0e1c21;
+  --card-background-color: #1b1b1b;
+  --card-action-color: #00e4f5;
+  --card-border-color: #414141;
+  --card-font-color: #fff;
+  --card-post-img: brightness(150%);
+  --login-logo: url("/assets/images/shavazLogo/login-dark-logo.svg");
+  --shavaz-logo: url("/assets/images/shavazLogo/dark-logo.svg");
+  --collapsed-logo: url("/assets/images/shavazLogo/collapsed-dark-logo.svg");
+  --main-box-shadow: 0px 0px 4px 1px #ffffff42;
+  --section-box-shadow: -2px 2px 5px 1px #10131bad;
+  --main-border-color:#414141;
+  --section-border: 1px solid #414141;
+  --pagination-background-color: #414141;
+  --pagination-font-color: #fff;
+  --pagination-active-color: #00e4f5;
+  --theme-icon: url("/assets/images/icons/dark/icon-theme-dark.svg");
+  --sidebar-header-background: url("/assets/images/sidebar-head-dark.svg");
+  --dark-bold: 700;
+  --descriptions-border-color: #272727;
+  --descriptions-item-background-color: #0C161A;
+  --select-background-color: #091114;
+  --current-bar-color: #eafeff;
+  --last-bar-color: #FB2576;
+  --chart-tooltip-background-color: #222;
+  --chart-brush-background-color: #172529;
+  --chart-brush-color: #60888b;
+  --rank-card-background-color: #0c6066;
+  --shadow-color: #888;
+  --admin-message-color: #223237;
+  --customer-message-color: rgb(59, 59, 59);
+}
+
+body {
+  font-family: IRANSans;
+  font-size: 14px;
+  scrollbar-color: var(--scrollbar-color) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  direction: ltr;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 4px;
+}
