@@ -1,14 +1,15 @@
 import { Row } from "components/utils/grid";
 import "components/utils/listCard/listCard.scss";
 import { useSelector } from "react-redux";
+import { list } from "tools/shared/order";
 
 function ListCard({ entity, card: Card, rowKey = "ID" }) {
-    const { dataList, loading } = useSelector((s) => s[entity.pluralizeName]);
+    // const { dataList, loading } = useSelector((s) => s[entity.pluralizeName]);
     return (
         <div>
             <Row className="list-card ">
-                {dataList.map((item) => (
-                    <Card key={item[rowKey]} item={item} loading={loading} />
+                {list.map((item) => (
+                    <Card key={item[rowKey]} item={item} />
                 ))}
             </Row>
         </div>

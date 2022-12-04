@@ -16,16 +16,16 @@ import ActionButton from 'components/utils/actionsButton'
 import Skeleton from 'components/utils/skeleton'
 
 function Detail() {
-    const { ID } = useParams()
+    // const { ID } = useParams()
     let navigate = useNavigate()
 
-    useEffect(() => {
-        getItem({ ID })
-    }, [ID])
+    // useEffect(() => {
+    //     getItem({ ID })
+    // }, [ID])
 
-    const { loading } = useSelector(
-        (s) => s[entity.name]
-    )
+    // const { loading } = useSelector(
+    //     (s) => s[entity.name]
+    // )
 
     const tabs = [
         {
@@ -48,26 +48,26 @@ function Detail() {
             title: " دریافت کننده",
             render: <Receiver dataSource='orderDetailReceiver' entity={entity} />
         },
-        {
-            title: "بارکد ",
-            render: <Barcode dataSource={{ transaction: 'transactionLogs', barcode: 'barcodes' }} entity={entity} />
-        },
+        // {
+        //     title: "بارکد ",
+        //     render: <Barcode dataSource={{ transaction: 'transactionLogs', barcode: 'barcodes' }} entity={entity} />
+        // },
         {
             title: "فاکتور ",
-            render: <Invoice dataSource='orderProducts' orderID={ID} entity={entity} />
+            render: <Invoice dataSource='orderProducts' entity={entity} />
         },
     ]
 
     return (
         <div className='section-card'>
-            <h1>جزییات سفارش {ID}</h1>
-            <Skeleton
+            <h1>جزییات سفارش </h1>
+            {/* <Skeleton
                 avatar
                 active
                 loading={loading}
-            >
+            > */}
                 <Tabs tabs={tabs} position="top" />
-            </Skeleton>
+            {/* </Skeleton> */}
             <ActionButton position="center">
                 <Button
                     type="secondary-warning"

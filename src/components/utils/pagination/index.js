@@ -4,9 +4,9 @@ import "components/utils/pagination/pagination.scss";
 import { useSelector } from "react-redux";
 
 function Pagination({ entity, ...props }) {
-    const { pageIndex, pageSize, totalRecords } = useSelector(
-        (s) => s[entity.pluralizeName]
-    );
+    // const { pageIndex, pageSize, totalRecords } = useSelector(
+    //     (s) => s[entity.pluralizeName]
+    // );
 
     return (
         <AntPagination
@@ -14,10 +14,10 @@ function Pagination({ entity, ...props }) {
             pageSizeOptions={["10", "20", "30"]}
             size="medium"
             showSizeChanger={true}
-            current={pageIndex}
-            total={totalRecords}
-            pageSize={pageSize}
-            defaultPageSize={pageSize}
+            current={1}
+            total={10}
+            pageSize={10}
+            defaultPageSize={10}
             {...props}
         />
     );

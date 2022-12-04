@@ -1,35 +1,36 @@
 import Descriptions from 'components/utils/descriptions'
 import { useSelector } from 'react-redux'
+import { detail } from 'tools/shared/order'
 
 function UserInfo({ dataSource, entity }) {
-    const { data } = useSelector(
-        (s) => s[entity.name]
-    );
+    // const { data } = useSelector(
+    //     (s) => s[entity.name]
+    // );
 
-    const detail = data[dataSource]
+    const data = detail[dataSource]
 
-    if (detail === undefined) return (null)
+    if (data === undefined) return (null)
 
     const columns = [
         {
             label: "نام ",
-            text: detail.name
+            text: data.name
         },
         {
             label: " نام کاربری ",
-            text: detail.username
+            text: data.username
         },
         {
             label: "موبایل  ",
-            text: detail.mobile
+            text: data.mobile
         },
         {
             label: " تلفن ",
-            text: detail.phone
+            text: data.phone
         },
         {
             label: " ایمیل ",
-            text: detail.email
+            text: data.email
         }
     ]
 

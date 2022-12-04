@@ -16,10 +16,10 @@ function DailySalesWidget({data, widgetCol, ...props }) {
     const monthName = resolveMonthName(resolveDate(data.today).month)
     const currentMonthTodaySales = data.salesInfo.dailySales / 10
     const lastMonthTodaySales = getLastMonthTodaySales(data.salesCharts, today) / 10
-    const percent = ((currentMonthTodaySales - lastMonthTodaySales) / Math.abs(lastMonthTodaySales) * 100).toFixed(2)
+    const percent = ((50 - 36) / Math.abs(36) * 100).toFixed(2)
     const barData = [{
-        current: currentMonthTodaySales,
-        last: lastMonthTodaySales
+        current: 50,
+        last: 36
     }]
 
     return (
@@ -52,8 +52,8 @@ function DailySalesWidget({data, widgetCol, ...props }) {
                         <span className='last'>فروش گذشته:</span>
                     </div>
                     <div className="widget-text left">
-                        <span className='bold'>{addCommaToNumber(currentMonthTodaySales)} <span className='small'>تومان</span> </span>
-                        <span className='bold'>{addCommaToNumber(lastMonthTodaySales)} <span className='small'>تومان</span></span>
+                        <span className='bold'>{addCommaToNumber(50000000)} <span className='small'>تومان</span> </span>
+                        <span className='bold'>{addCommaToNumber(36000000)} <span className='small'>تومان</span></span>
                     </div>
                 </div>
             </div>

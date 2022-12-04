@@ -1,43 +1,44 @@
 import Descriptions from 'components/utils/descriptions'
 import { useSelector } from 'react-redux'
+import { detail } from 'tools/shared/order'
 
 function Receiver({ dataSource, entity }) {
-    const { data } = useSelector(
-        (s) => s[entity.name]
-    );
+    // const { data } = useSelector(
+    //     (s) => s[entity.name]
+    // );
 
-    const detail = data[dataSource]
+    const data = detail[dataSource]
 
-    if (detail === undefined) return (null)
+    if (data === undefined) return (null)
 
     const columns = [
         {
             label: "نام",
-            text: detail.name
+            text: data.name
         },
         {
             label: "استان",
-            text: detail.receiverProvince
+            text: data.receiverProvince
         },
         {
             label: "شهر",
-            text: detail.receiverCity
+            text: data.receiverCity
         },
         {
             label: "آدرس",
-            text: detail.receiverAddress
+            text: data.receiverAddress
         },
         {
             label: "کد پستی",
-            text: detail.receiverPostalCode
+            text: data.receiverPostalCode
         },
         {
             label: "تلفن",
-            text: detail.receiverPhone
+            text: data.receiverPhone
         },
         {
             label: "موبایل",
-            text: detail.mobile
+            text: data.mobile
         }
     ]
 

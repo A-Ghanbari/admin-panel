@@ -5,6 +5,7 @@ import { useSelector } from "react-redux"
 import { addCommaToNumber } from "tools/utils"
 import useDraggableScroll from 'hooks/useDraggableScroll'
 import Notification from 'components/utils/notification'
+import { list } from "tools/shared/order"
 
 
 const convertColumns = (columns) =>
@@ -36,12 +37,12 @@ function Table({ entity, columns, rowKey = "ID", ...props }) {
                 <AntTable
                     className="table"
                     // bordered="true"
-                    dataSource={dataList}
+                    dataSource={list}
                     columns={tableColumns}
                     rowKey={rowKey}
                     pagination={false}
-                    loading={loading}
-                    footer={() => `تعداد کل رکورد ها: ${addCommaToNumber(totalRecords)}`}
+                    // loading={loading}
+                    footer={() => `تعداد کل رکورد ها: ${addCommaToNumber(10)}`}
                     {...props}
                 />
             </div>

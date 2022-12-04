@@ -14,24 +14,24 @@ import ActionButton from "components/utils/actionsButton"
 
 const fieldCol = { xs: 24, sm: 12, md: 12, lg: 8, xl: 6 }
 export default function Filter({
-    initialValues,
-    onFinish,
-    province,
-    setProvince,
-    setDate,
+    // initialValues,
+    // onFinish,
+    // province,
+    // setProvince,
+    // setDate,
 }) {
-    const [field, setFields] = useState(initialValues)
-    const [loading, setLoading] = useState(false)
+    // const [field, setFields] = useState(initialValues)
+    // const [loading, setLoading] = useState(false)
 
-    const onValuesChange = (changedValues, allValues) => {
-        setFields(allValues)
-        if (changedValues.dateFrom === allValues.dateFrom) setDate(s => ({ ...s, DateFrom: convertDate(allValues.dateFrom) }))
-        if (changedValues.dateTo === allValues.dateTo) setDate(s => ({ ...s, DateTo: convertDate(allValues.dateTo) }))
-    }
+    // const onValuesChange = (changedValues, allValues) => {
+    //     setFields(allValues)
+    //     if (changedValues.dateFrom === allValues.dateFrom) setDate(s => ({ ...s, DateFrom: convertDate(allValues.dateFrom) }))
+    //     if (changedValues.dateTo === allValues.dateTo) setDate(s => ({ ...s, DateTo: convertDate(allValues.dateTo) }))
+    // }
 
     return (
         <Collapse title="فیلتر">
-            <Form onFinish={onFinish} initialValues={initialValues} onValuesChange={onValuesChange}>
+            <Form > 
                 <Row className="filter-form">
                     <ColumnGrid col={fieldCol}>
                         <FormInput
@@ -62,7 +62,7 @@ export default function Filter({
                             name="dateTo"
                             label="تاریخ تا"
                         />
-                        <FormProvinceAndCity
+                        {/* <FormProvinceAndCity
                             name="provinceAndCity"
                             label="استان و شهر"
                             defaultValues={Object.values(province)}
@@ -72,7 +72,7 @@ export default function Filter({
                                     cityID: selectedOptions[1],
                                 })
                             }}
-                        />
+                        /> */}
                         <FormSelect
                             name="orderStatus"
                             label="وضعیت سفارش"
@@ -150,13 +150,13 @@ export default function Filter({
                             name="excel"
                             label="خروجی اکسل"
                             type="primary-dark"
-                            loading={loading}
-                            onClick={() => exportTableExcelFile({
-                                url: API_SERVICES.order.ordersReport,
-                                fileName: 'order-report-file',
-                                data: checkFilters(field),
-                                loading: setLoading
-                            })}
+                            // loading={loading}
+                            // onClick={() => exportTableExcelFile({
+                            //     url: API_SERVICES.order.ordersReport,
+                            //     fileName: 'order-report-file',
+                            //     data: checkFilters(field),
+                            //     loading: setLoading
+                            // })}
                         />
                     </ActionButton>
                 </Row>

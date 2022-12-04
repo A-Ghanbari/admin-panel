@@ -1,27 +1,28 @@
 import Descriptions from 'components/utils/descriptions'
 import { useSelector } from 'react-redux'
+import { detail } from 'tools/shared/order'
 
 function Payment({ dataSource, entity }) {
-    const { data } = useSelector(
-        (s) => s[entity.name]
-    );
+    // const { data } = useSelector(
+    //     (s) => s[entity.name]
+    // );
 
-    const detail = data[dataSource]
+    const data = detail[dataSource]
 
-    if (detail === undefined) return (null)
+    if (data === undefined) return (null)
 
     const columns = [
         {
             label: "وضعیت پرداخت",
-            text: detail.status ? "تایید شده" : "در انتظار تایید"
+            text: data.status ? "تایید شده" : "در انتظار تایید"
         },
         {
             label: " کد رهگیری",
-            text: detail.bankResponse
+            text: data.bankResponse
         },
         {
             label: "تاریخ پرداخت",
-            text: detail.payDate
+            text: data.payDate
         }
     ]
 

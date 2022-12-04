@@ -20,18 +20,18 @@ import Notification from "components/utils/notification"
 import "components/order/order.scss"
 
 export default function List() {
-    const [date, setDate] = useState(null)
-    const [commercialLoading, setCommercialLoading] = useState(false)
-    const [financialLoading, setFinancialLoading] = useState(false)
-    const [pageIndex, setPageIndex] = useState(1)
-    const [pageSize, setPageSize] = useState(PAGE_SIZE)
-    const [province, setProvince] = useState({
-        provinceID: " ",
-        cityID: " ",
-    })
+    // const [date, setDate] = useState(null)
+    // const [commercialLoading, setCommercialLoading] = useState(false)
+    // const [financialLoading, setFinancialLoading] = useState(false)
+    // const [pageIndex, setPageIndex] = useState(1)
+    // const [pageSize, setPageSize] = useState(PAGE_SIZE)
+    // const [province, setProvince] = useState({
+    //     provinceID: " ",
+    //     cityID: " ",
+    // })
 
-    const filter = useSelector((s) => s.filter)
-    const reload = useSelector((s) => s.reloadList)
+    // const filter = useSelector((s) => s.filter)
+    // const reload = useSelector((s) => s.reloadList)
 
     const columns = [
         {
@@ -103,130 +103,130 @@ export default function List() {
                     >
                         <Icon key="edit" type="edit" />
                     </Link>
-                    <Link
+                    {/* <Link
                         to={`./changeStatus/${r.ID}`}
                         title="تغییر وضعیت"
                         permission="editOrderStatus"
-                    >
+                    > */}
                         <Icon key="changeStatus" type="changeStatus" />
-                    </Link>
-                    <Link
+                    {/* </Link> */}
+                    {/* <Link
                         to={`./createManual/${r.ID}`}
                         title="سفارش اپراتوری"
                         permission="createManualOrder"
-                    >
+                    > */}
                         <Icon key="add" type="add" />
-                    </Link>
+                    {/* </Link> */}
                 </div>
             ),
         },
     ]
 
-    useEffect(() => {
-        getItems(checkFilters({ ...filter.order.list }))
-    }, [filter.order.list, reload])
+    // useEffect(() => {
+    //     getItems(checkFilters({ ...filter.order.list }))
+    // }, [filter.order.list, reload])
 
-    useEffect(() => {
-        setFilterDate()
-    }, [])
+    // useEffect(() => {
+    //     setFilterDate()
+    // }, [])
 
-    const setFilterDate = () => {
-        if (filter.order.list.dateFrom && !filter.order.list.dateTo) {
-            setDate({ DateFrom: filter.order.list.dateFrom })
-        }
-        if (filter.order.list.dateFrom && filter.order.list.dateTo) {
-            setDate({ DateFrom: filter.order.list.dateFrom, DateTo: filter.order.list.dateTo })
-        }
-    }
+    // const setFilterDate = () => {
+    //     if (filter.order.list.dateFrom && !filter.order.list.dateTo) {
+    //         setDate({ DateFrom: filter.order.list.dateFrom })
+    //     }
+    //     if (filter.order.list.dateFrom && filter.order.list.dateTo) {
+    //         setDate({ DateFrom: filter.order.list.dateFrom, DateTo: filter.order.list.dateTo })
+    //     }
+    // }
 
-    const filterChangeHandler = (values) => {
-        dispatch(setFilter({
-            ...filter,
-            order: {
-                ...filter.order,
-                list: {
-                    ...filter.order.list,
-                    ...province,
-                    ...values,
-                    dateFrom: date?.DateFrom,
-                    dateTo: date?.DateTo,
-                    provinceAndCity: undefined,
-                    pageIndex: 1
-                }
-            }
-        }))
-    }
+    // const filterChangeHandler = (values) => {
+    //     dispatch(setFilter({
+    //         ...filter,
+    //         order: {
+    //             ...filter.order,
+    //             list: {
+    //                 ...filter.order.list,
+    //                 ...province,
+    //                 ...values,
+    //                 dateFrom: date?.DateFrom,
+    //                 dateTo: date?.DateTo,
+    //                 provinceAndCity: undefined,
+    //                 pageIndex: 1
+    //             }
+    //         }
+    //     }))
+    // }
 
-    const paginationChangeHandler = (index, size) => {
-        setPageIndex(index)
-        setPageSize(size)
-        dispatch(setFilter({
-            ...filter,
-            order: {
-                ...filter.order,
-                list: {
-                    ...filter.order.list,
-                    pageIndex: index,
-                    pageSize: size,
-                }
-            }
-        }))
-    }
+    // const paginationChangeHandler = (index, size) => {
+    //     setPageIndex(index)
+    //     setPageSize(size)
+    //     dispatch(setFilter({
+    //         ...filter,
+    //         order: {
+    //             ...filter.order,
+    //             list: {
+    //                 ...filter.order.list,
+    //                 pageIndex: index,
+    //                 pageSize: size,
+    //             }
+    //         }
+    //     }))
+    // }
 
     return (
         <div>
             <Filter
-                onFinish={filterChangeHandler}
-                initialValues={{
-                    ...filter.order.list,
-                    dateFrom: gregorianToJalali(date?.DateFrom),
-                    dateTo: gregorianToJalali(date?.DateTo)
-                }}
-                province={province}
-                setProvince={setProvince}
-                setDate={setDate}
+                // onFinish={filterChangeHandler}
+                // initialValues={{
+                //     ...filter.order.list,
+                //     dateFrom: gregorianToJalali(date?.DateFrom),
+                //     dateTo: gregorianToJalali(date?.DateTo)
+                // }}
+                // province={province}
+                // setProvince={setProvince}
+                // setDate={setDate}
             />
             <ActionButton position="right">
                 <Button
                     name="excel"
                     type="secondary-dark"
                     label="گزارش فروش بازرگانی"
-                    loading={commercialLoading}
-                    onClick={() =>
-                        date?.DateFrom && date?.DateTo ?
-                            exportTableExcelFile({
-                                url: API_SERVICES.order.commercialSalesReport,
-                                fileName: 'commercial-sales-report',
-                                data: date,
-                                loading: setCommercialLoading
-                            })
-                            :
-                            Notification.error("لطفا یک بازه زمانی وارد کنید")
-                    }
+                    // loading={commercialLoading}
+                    // onClick={() =>
+                    //     date?.DateFrom && date?.DateTo ?
+                    //         exportTableExcelFile({
+                    //             url: API_SERVICES.order.commercialSalesReport,
+                    //             fileName: 'commercial-sales-report',
+                    //             data: date,
+                    //             loading: setCommercialLoading
+                    //         })
+                    //         :
+                    //         Notification.error("لطفا یک بازه زمانی وارد کنید")
+                    // }
                 />
                 <Button
                     name="excel"
                     type="secondary-dark"
                     label="گزارش فروش مالی"
-                    loading={financialLoading}
-                    onClick={() =>
-                        date?.DateFrom && date?.DateTo ?
-                            exportTableExcelFile({
-                                url: API_SERVICES.order.financialSalesReport,
-                                fileName: 'financial-sales-report',
-                                data: { createdDateFrom: date.DateFrom, createdDateTo: date.DateTo },
-                                loading: setFinancialLoading
-                            })
-                            :
-                            Notification.error("لطفا یک بازه زمانی وارد کنید")
-                    }
+                    // loading={financialLoading}
+                    // onClick={() =>
+                    //     date?.DateFrom && date?.DateTo ?
+                    //         exportTableExcelFile({
+                    //             url: API_SERVICES.order.financialSalesReport,
+                    //             fileName: 'financial-sales-report',
+                    //             data: { createdDateFrom: date.DateFrom, createdDateTo: date.DateTo },
+                    //             loading: setFinancialLoading
+                    //         })
+                    //         :
+                    //         Notification.error("لطفا یک بازه زمانی وارد کنید")
+                    // }
                 />
             </ActionButton>
             <ListComposed
                 entity={entity}
                 columns={columns}
                 card={Card}
-                handlerChange={paginationChangeHandler}
+                // handlerChange={paginationChangeHandler}
             />
         </div>
     )

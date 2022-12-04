@@ -47,17 +47,17 @@ function Invoice({ orderID, entity, dataSource }) {
                 <Button
                     type="secondary-dark"
                     label="پرینت فاکتور"
-                    onClick={() => window.open(`/export/acc/${orderID}`, '_blank')}
+                    // onClick={() => window.open(`/export/acc/${orderID}`, '_bla/nk')}
                 />
                 <Button
                     type="secondary-warning"
                     label="دانلود فاکتور"
-                    onClick={() => downloadOrderInvoice({ orderID: orderID })}
+                    // onClick={() => downloadOrderInvoice({ orderID: orderID })}
                 />
                 <Button
                     type="secondary-warning"
                     label="دانلود فاکتور مالی"
-                    onClick={() => financeOrderInvoice({ orderID: orderID })}
+                    // onClick={() => financeOrderInvoice({ orderID: orderID })}
                 />
             </ActionButton>
             <CustomTable

@@ -4,6 +4,7 @@ import "components/utils/table/table.scss"
 import { useSelector } from "react-redux"
 import useDraggableScroll from 'hooks/useDraggableScroll'
 import Notification from 'components/utils/notification'
+import { detail } from "tools/shared/order"
 
 const convertColumns = (columns) =>
     columns.map((c) => ({ ...c, dataIndex: c.key }))
@@ -11,9 +12,9 @@ const convertColumns = (columns) =>
 function CustomTable({ entity, columns, dataSource, rowKey = "ID", ...props }) {
     const [tableColumns] = useState(() => convertColumns(columns))
 
-    const { data, loading } = useSelector(
-        (s) => s[entity.name]
-    )
+    // const { data, loading } = useSelector(
+    //     (s) => s[entity.name]
+    // )
 
     const ref = useRef(null)
     const { onMouseDown } = useDraggableScroll(ref)
@@ -34,11 +35,11 @@ function CustomTable({ entity, columns, dataSource, rowKey = "ID", ...props }) {
                 <AntTable
                     className="table"
                     bordered="true"
-                    dataSource={data[dataSource]}
+                    dataSource={detail[dataSource]}
                     columns={tableColumns}
                     rowKey={rowKey}
                     pagination={false}
-                    loading={loading}
+                    // loading={loading}
                     {...props}
                 />
             </div>
