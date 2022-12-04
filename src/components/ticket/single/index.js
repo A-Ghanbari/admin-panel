@@ -14,59 +14,59 @@ import FormUpload from 'components/utils/form/items/FormUpload'
 const fieldCol = { xs: 24, sm: 12, md: 12, lg: 8, xl: 6 }
 export default function Single() {
 
-    useEffect(() => {
-        getTicketsCategory()
-    }, [])
+    // useEffect(() => {
+    //     getTicketsCategory()
+    // }, [])
 
-    const { dataList } = useSelector(
-        (s) => s[entity.pluralizeName]
-    )
+    // const { dataList } = useSelector(
+    //     (s) => s[entity.pluralizeName]
+    // )
 
-    const getTicketTypes = () => {
-        let ticketType = [{ label: "انتخاب کنید", value: " " }]
-        for (const item of dataList) {
-            if (!item.parentID) {
-                let type = {
-                    label: item.titleName,
-                    value: item.ID,
-                    children: []
-                }
-                for (const child of dataList) {
-                    if (child.parentID !== null) {
-                        if (child.parentID === type.value) {
-                            type.children.push({
-                                label: child.titleName,
-                                value: child.ID
-                            })
-                        }
-                    }
-                }
-                ticketType.push(type)
-            }
-        }
-        return ticketType
-    }
+    // const getTicketTypes = () => {
+    //     let ticketType = [{ label: "انتخاب کنید", value: " " }]
+    //     for (const item of dataList) {
+    //         if (!item.parentID) {
+    //             let type = {
+    //                 label: item.titleName,
+    //                 value: item.ID,
+    //                 children: []
+    //             }
+    //             for (const child of dataList) {
+    //                 if (child.parentID !== null) {
+    //                     if (child.parentID === type.value) {
+    //                         type.children.push({
+    //                             label: child.titleName,
+    //                             value: child.ID
+    //                         })
+    //                     }
+    //                 }
+    //             }
+    //             ticketType.push(type)
+    //         }
+    //     }
+    //     return ticketType
+    // }
 
-    const onFinish = (values) => {
-        let ticketFiles = []
-        if (values.ticketFiles) {
-            for (const img of values.ticketFiles) {
-                ticketFiles.push({
-                    fileAddress: img.response.path
-                })
-            }
-        }
-        createSingleTicket({
-            ...values,
-            typeID: values.typeID[values.typeID.length - 1],
-            ticketFiles: ticketFiles
-        })
-    }
+    // const onFinish = (values) => {
+    //     let ticketFiles = []
+    //     if (values.ticketFiles) {
+    //         for (const img of values.ticketFiles) {
+    //             ticketFiles.push({
+    //                 fileAddress: img.response.path
+    //             })
+    //         }
+    //     }
+    //     createSingleTicket({
+    //         ...values,
+    //         typeID: values.typeID[values.typeID.length - 1],
+    //         ticketFiles: ticketFiles
+    //     })
+    // }
 
     return (
         <div className="form-card">
             <Form
-                onFinish={onFinish}
+                // onFinish={onFinish}
                 initialValues={{ typeID: " " }}
             >
                 <ColumnGrid col={fieldCol}>
@@ -78,7 +78,7 @@ export default function Single() {
                     <FormCascader
                         name="typeID"
                         label="نوع تیکت"
-                        options={getTicketTypes()}
+                        // options={getTicketTypes()}
                         required={true}
                         changeOnSelect
                     />
@@ -91,7 +91,7 @@ export default function Single() {
                 <h4>توضیحات :</h4>
                 <FormEditor
                     name="content"
-                    media={false}
+                    // media={false}
                 />
                 <h4>بارگذاری فایل :</h4>
                 <FormUpload

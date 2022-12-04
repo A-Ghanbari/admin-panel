@@ -19,55 +19,55 @@ import Skeleton from "components/utils/skeleton"
 
 const fieldCol = { xs: 24, sm: 12, md: 12, lg: 8, xl: 6 }
 export default function Conversation() {
-    const [value, setValue] = useState("")
+    // const [value, setValue] = useState("")
     const { ID } = useParams()
     let navigate = useNavigate()
 
-    useEffect(() => {
-        getTicketsTypes()
-        getCustomerTicketsMessages({ ticketID: ID })
-    }, [value])
+    // useEffect(() => {
+    //     getTicketsTypes()
+    //     getCustomerTicketsMessages({ ticketID: ID })
+    // }, [value])
 
-    const { dataList } = useSelector(
-        (s) => s[typeEntity.pluralizeName]
-    )
+    // const { dataList } = useSelector(
+    //     (s) => s[typeEntity.pluralizeName]
+    // )
 
-    const { data, loading } = useSelector(
-        (s) => s[messageEntity.name]
-    )
+    // const { data, loading } = useSelector(
+    //     (s) => s[messageEntity.name]
+    // )
 
-    const ticketType = []
-    for (const item of dataList) {
-        ticketType.push({
-            text: item.titleName,
-            value: item.ID
-        })
-    }
+    // const ticketType = []
+    // for (const item of dataList) {
+    //     ticketType.push({
+    //         text: item.titleName,
+    //         value: item.ID
+    //     })
+    // }
 
-    const onFinish = (values) => {
-        responseForTicket({
-            ticketID: ID,
-            ...values,
-            TicketFiles: [],
-            title: "Title"
-        });
-        setValue(values)
-    }
+    // const onFinish = (values) => {
+    //     responseForTicket({
+    //         ticketID: ID,
+    //         ...values,
+    //         TicketFiles: [],
+    //         title: "Title"
+    //     });
+    //     setValue(values)
+    // }
 
-    const changeStatus = (changedValues) => {
-        ticketChangeStatus({
-            ticketID: ID,
-            ...changedValues,
-            typeID: data.typeID
-        })
-    }
+    // const changeStatus = (changedValues) => {
+    //     ticketChangeStatus({
+    //         ticketID: ID,
+    //         ...changedValues,
+    //         typeID: data.typeID
+    //     })
+    // }
 
-    const changeTicketType = (changedValues) => {
-        ticketChangeTicketType({
-            ticketID: ID,
-            ...changedValues
-        })
-    }
+    // const changeTicketType = (changedValues) => {
+    //     ticketChangeTicketType({
+    //         ticketID: ID,
+    //         ...changedValues
+    //     })
+    // }
 
     return (
         <div className="section-card">
@@ -76,8 +76,8 @@ export default function Conversation() {
             </h1>
             <ColumnGrid col={fieldCol}>
                 <Form
-                    initialValues={data}
-                    onValuesChange={changeStatus}
+                    // initialValues={data}
+                    // onValuesChange={changeStatus}
                 >
                     <FormSelectSearch
                         name="status"
@@ -103,30 +103,30 @@ export default function Conversation() {
                     />
                 </Form>
                 <Form
-                    initialValues={data}
-                    onValuesChange={changeTicketType}
+                    // initialValues={data}
+                    // onValuesChange={changeTicketType}
                 >
                     <FormSelectSearch
                         name="typeID"
                         label="نوع"
-                        items={ticketType}
+                        // items={ticketType}
                     />
                 </Form>
             </ColumnGrid>
-            <Skeleton
+            {/* <Skeleton
                 avatar
                 active
                 loading={loading}
-            >
-                <Messages data={data?.lst?.dataList} />
-            </Skeleton>
+            > */}
+                <Messages />
+            {/* </Skeleton> */}
             <Form
-                onFinish={onFinish}
+                // onFinish={onFinish}
                 initialValues={{ content: " " }}
             >
                 <FormEditor
                     name="content"
-                    media={false}
+                    // media={false}
                 />
                 <ActionButton position="center">
                     <Button

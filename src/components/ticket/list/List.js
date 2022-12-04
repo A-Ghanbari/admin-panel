@@ -12,48 +12,49 @@ import Filter from "components/ticket/list/Filter"
 import Card from "components/ticket/list/Card"
 import Link from "components/utils/link"
 import "components/ticket/ticket.scss"
+import { ticketList } from "tools/shared/ticket"
 
 export default function List() {
-    const [pageIndex, setPageIndex] = useState(1)
-    const [pageSize, setPageSize] = useState(PAGE_SIZE)
+    // const [pageIndex, setPageIndex] = useState(1)
+    // const [pageSize, setPageSize] = useState(PAGE_SIZE)
 
-    const filter = useSelector(
-        (s) => s.filter
-    )
+    // const filter = useSelector(
+    //     (s) => s.filter
+    // )
 
-    useEffect(() => {
-        getCustomerTickets({ ...filter.ticket.list })
-    }, [filter.ticket.list])
+    // useEffect(() => {
+    //     getCustomerTickets({ ...filter.ticket.list })
+    // }, [filter.ticket.list])
 
-    const filterChangeHandler = (values) => {
-        dispatch(setFilter({
-            ...filter,
-            ticket: {
-                ...filter.ticket,
-                list: checkFilters({
-                    ...filter.ticket.list,
-                    ...values,
-                    pageIndex: 1
-                })
-            }
-        }))
-    }
+    // const filterChangeHandler = (values) => {
+    //     dispatch(setFilter({
+    //         ...filter,
+    //         ticket: {
+    //             ...filter.ticket,
+    //             list: checkFilters({
+    //                 ...filter.ticket.list,
+    //                 ...values,
+    //                 pageIndex: 1
+    //             })
+    //         }
+    //     }))
+    // }
 
-    const paginationChangeHandler = (index, size) => {
-        setPageIndex(index)
-        setPageSize(size)
-        dispatch(setFilter({
-            ...filter,
-            ticket: {
-                ...filter.ticket,
-                list: {
-                    ...filter.ticket.list,
-                    pageIndex: index,
-                    pageSize: size
-                }
-            }
-        }))
-    }
+    // const paginationChangeHandler = (index, size) => {
+    //     setPageIndex(index)
+    //     setPageSize(size)
+    //     dispatch(setFilter({
+    //         ...filter,
+    //         ticket: {
+    //             ...filter.ticket,
+    //             list: {
+    //                 ...filter.ticket.list,
+    //                 pageIndex: index,
+    //                 pageSize: size
+    //             }
+    //         }
+    //     }))
+    // }
 
     const columns = [
         {
@@ -125,18 +126,19 @@ export default function List() {
     return (
         <div>
             <Filter
-                onFinish={filterChangeHandler}
-                initialValues={{
-                    ...filter.ticket.list,
-                    dateFrom: gregorianToJalali(filter.ticket.list.dateFrom),
-                    dateTo: gregorianToJalali(filter.ticket.list.dateTo)
-                }}
+                // onFinish={filterChangeHandler}
+                // initialValues={{
+                //     ...filter.ticket.list,
+                //     dateFrom: gregorianToJalali(filter.ticket.list.dateFrom),
+                //     dateTo: gregorianToJalali(filter.ticket.list.dateTo)
+                // }}
             />
             <ListComposed
                 entity={entity}
                 columns={columns}
                 card={Card}
-                handlerChange={paginationChangeHandler}
+                // handlerChange={paginationChangeHandler}
+                data={ticketList}
                 rowKey="ticketID"
             />
         </div>
