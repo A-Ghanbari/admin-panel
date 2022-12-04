@@ -10,14 +10,14 @@ export default function PhotoGallery({ data }) {
     const columns = [{
         label: "تصویر",
         new: newPicLink,
-        old: oldModel[0] ? oldModel[0].FilePath : 'https://panel.shavaz.com/images/no-image.jpg',
+        old: oldModel[0] ? oldModel[0].FilePath : 'https://panel.test.com/images/no-image.jpg',
         type: "album"
     }]
     newModel?.map((image, index) => (
         columns.push({
             label: "تصویر",
             new: image.FilePath,
-            old: oldModel[index + 1] ? oldModel[index + 1].FilePath : 'https://panel.shavaz.com/images/no-image.jpg',
+            old: oldModel[index + 1] ? oldModel[index + 1].FilePath : 'https://panel.test.com/images/no-image.jpg',
             type: "album"
         })
     ))

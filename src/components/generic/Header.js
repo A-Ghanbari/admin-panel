@@ -88,8 +88,8 @@ function Header() {
                 </div>
                 <div className="sidebar-menu-user">
 
-                    <h4>کاربر تستی</h4>
-                    {/* <img src={data.photo} alt="عکس پروفایل" /> */}
+                    <h4>تست</h4>
+                    <img src="https://joeschmoe.io/api/v1/random" alt="عکس پروفایل" />
                     <div
                         className="theme-icon"
                         style={{ cursor: 'pointer' }}

@@ -29,13 +29,10 @@ export const login = () =>{
 
 export function logout() {
     return function (dispatch) {
-        removeUser()
+        // removeUser()
         dispatch({
             type: entity.upperName,
-            payload: {
-                isLogin: false,
-                isLoading: false
-            },
+            payload: false
         })
     }
 }

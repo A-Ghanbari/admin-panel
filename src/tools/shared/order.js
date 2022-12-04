@@ -349,7 +349,7 @@ export const detail = {
             name: "سرم آبرسان ایمیجز مدل Blood Orange ظرفیت 100 میلی لیتر",
             brandName: "ایمیجز",
             picLink:
-                "https://adminapishop.shavaz.com//Content/productPicLink/uploadImage-1670056637069-uploadImage-1660463716032-1-93cc815a1-f580-40e5-b8d5-4d99625d9043_113c4dd6d-8df9-4a04-a590-69be47ad8999_6.jpg",
+                "https://joeschmoe.io/api/v1/random",
             count: 1,
             sort: 0,
             brandSort: 0,
@@ -370,7 +370,7 @@ export const detail = {
             name: "ماسک صورت ورقه ای حاوی گل رز سادور وزن 25 گرمی",
             brandName: "سادور",
             picLink:
-                "https://adminapishop.shavaz.com//Content/productPicLink/uploadImage-1669620907897-uploadImage-1657350954283-_DSC1499030d014a-548d-4a91-b06d-a784d33be8e4_18594df23-5599-4727-94f0-b5ae33c2bd37_6.jpg",
+                "https://joeschmoe.io/api/v1/random",
             count: 1,
             sort: 0,
             brandSort: 0,

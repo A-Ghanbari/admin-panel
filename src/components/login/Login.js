@@ -40,17 +40,19 @@ export function Login() {
                             name="LoginForm"
                             onFinish={onFinish}
                             autoComplete="off"
+                            initialValues={{
+                                username: "admin",
+                                password: "12345678",
+                            }}
                         >
                             <FormInput
                                 name="username"
                                 label="نام کاربری"
                                 allowClear={false}
-                                required={true}
                             />
                             <FormInputPassword
                                 name="password"
                                 label="رمز عبور"
-                                required={true}
                             />
                             <Button
                                 name="submit"
