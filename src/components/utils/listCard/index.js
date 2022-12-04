@@ -1,19 +1,18 @@
-import { Row } from "components/utils/grid";
-import "components/utils/listCard/listCard.scss";
-import { useSelector } from "react-redux";
-import { list } from "tools/shared/order";
+import { Row } from "components/utils/grid"
+import "components/utils/listCard/listCard.scss"
+import { useSelector } from "react-redux"
 
-function ListCard({ entity, card: Card, rowKey = "ID" }) {
+function ListCard({ data, entity, card: Card, rowKey = "ID" }) {
     // const { dataList, loading } = useSelector((s) => s[entity.pluralizeName]);
     return (
         <div>
             <Row className="list-card ">
-                {list.map((item) => (
+                {data.map((item) => (
                     <Card key={item[rowKey]} item={item} />
                 ))}
             </Row>
         </div>
-    );
+    )
 }
 
-export default ListCard;
+export default ListCard

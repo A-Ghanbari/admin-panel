@@ -1,16 +1,17 @@
 import { useSelector } from 'react-redux'
+import { usersRanking } from 'tools/shared/packing'
 import { addCommaToNumber } from 'tools/utils'
 import { PACKING_RANKING as entity } from "tools/utils/entities"
 
 export default function PackerCard() {
-    const { dataList } = useSelector(
-        (s) => s[entity.pluralizeName]
-    )
-    const firstUser = dataList[0]
-    const secondUser = dataList[1]
-    const thirdUser = dataList[2]
+    // const { dataList } = useSelector(
+    //     (s) => s[entity.pluralizeName]
+    // )
+    const firstUser = usersRanking[0]
+    const secondUser = usersRanking[1]
+    const thirdUser = usersRanking[2]
 
-    const otherUsers = dataList.slice(3)
+    const otherUsers = usersRanking.slice(3)
 
     return (
         <div className='ranking-wrapper'>

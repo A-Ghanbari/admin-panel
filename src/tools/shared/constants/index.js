@@ -1,6 +1,4 @@
-// export const API_BASE_URL = 'https://adminapishop.shavaz.com/'
-export const API_BASE_URL = 'https://apipanelshavaz.nafis.cloud/'
-// export const API_BASE_URL = '10.20.30.121/'
+export const API_BASE_URL = 'https://test.com/'
 
 export const PAGE_SIZE = 10
 export const TOKEN_NAME = 'token'

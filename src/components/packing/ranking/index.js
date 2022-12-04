@@ -16,29 +16,29 @@ import "components/packing/ranking/ranking.scss"
 import Card from 'components/utils/card'
 
 export default function Ranking() {
-    const [date, setData] = useState(null)
-    const [loading, setLoading] = useState(false)
+    // const [date, setData] = useState(null)
+    // const [loading, setLoading] = useState(false)
 
-    const { dataList, loading: dataLoading } = useSelector(
-        (s) => s[entity.pluralizeName]
-    )
+    // const { dataList, loading: dataLoading } = useSelector(
+    //     (s) => s[entity.pluralizeName]
+    // )
 
-    const onFinish = (values) => {
-        getPackingRankingList(convertDates(values))
-    }
+    // const onFinish = (values) => {
+    //     getPackingRankingList(convertDates(values))
+    // }
 
-    const onValuesChange = (changedValues, allValues) => {
-        if (allValues.createdDateFrom !== undefined && allValues.createdDateTo !== undefined) {
-            setData(convertDates(allValues))
-        }
-    }
+    // const onValuesChange = (changedValues, allValues) => {
+    //     if (allValues.createdDateFrom !== undefined && allValues.createdDateTo !== undefined) {
+    //         setData(convertDates(allValues))
+    //     }
+    // }
     return (
         <div className='ranking'>
             <div className='section-card management-card'>
                 <Form
                     name="WarehouseForm"
-                    onFinish={onFinish}
-                    onValuesChange={onValuesChange}
+                    // onFinish={onFinish}
+                    // onValuesChange={onValuesChange}
                     autoComplete="off"
                 >
                     <Row>
@@ -58,30 +58,26 @@ export default function Ranking() {
                         </Col>
                     </Row>
                     <ActionButton position="center">
-                        <Button name="submit" label="جستجو" htmlType="submit" loading={dataLoading} />
+                        <Button name="submit" label="جستجو" htmlType="submit" />
                         <Button
                             name="excel"
                             label="خروجی اکسل"
                             type="primary-dark"
-                            loading={loading}
-                            onClick={() => exportTableExcelFile({
-                                url: API_SERVICES.packing.ranking.excel,
-                                fileName: 'packing-rank-export',
-                                data: date,
-                                loading: setLoading
-                            })}
+                            // loading={loading}
+                            // onClick={() => exportTableExcelFile({
+                            //     url: API_SERVICES.packing.ranking.excel,
+                            //     fileName: 'packing-rank-export',
+                            //     data: date,
+                            //     loading: setLoading
+                            // })}
                         />
                     </ActionButton>
                 </Form>
             </div>
-            {dataList.length ?
                 <Card title="گزارش وضعیت">
                     <Report permission="barcodeReportOperationPermission" />
                     <PackerCard />
                 </Card>
-                :
-                null
-            }
         </div>
     )
 }

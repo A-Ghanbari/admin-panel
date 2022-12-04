@@ -18,6 +18,7 @@ import { exportTableExcelFile } from "store/actions/export"
 import API_SERVICES from "tools/shared/apis"
 import Notification from "components/utils/notification"
 import "components/order/order.scss"
+import { list } from "tools/shared/order"
 
 export default function List() {
     // const [date, setDate] = useState(null)
@@ -226,6 +227,7 @@ export default function List() {
                 entity={entity}
                 columns={columns}
                 card={Card}
+                data={list}
                 // handlerChange={paginationChangeHandler}
             />
         </div>
